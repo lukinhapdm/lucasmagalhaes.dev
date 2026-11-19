@@ -1,6 +1,5 @@
-import { AnimatePresence, m } from 'framer-motion'
 import { Languages, Menu, Moon, Sun, X } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { IconButton } from '@/components/ui/Button'
 import { useActiveSection } from '@/hooks/useActiveSection'
@@ -23,6 +22,12 @@ export function Header({ onOpenPalette, onPreloadPalette }: HeaderProps) {
   const active = useActiveSection(SECTIONS)
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  const mobileNavRef = useRef<HTMLElement>(null)
+
+  // Menu fechado fica fora da ordem de foco e da árvore de acessibilidade.
+  useEffect(() => {
+    if (mobileNavRef.current) mobileNavRef.current.inert = !open
+  }, [open])
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24)
@@ -150,40 +155,38 @@ export function Header({ onOpenPalette, onPreloadPalette }: HeaderProps) {
           </div>
         </div>
 
-        <AnimatePresence>
-          {open && (
-            <m.nav
-              id="mobile-nav"
-              aria-label={t('a11y.mainNav')}
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: 'auto', opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="overflow-hidden lg:hidden"
-            >
-              <ul className="container-page flex flex-col gap-1 pb-4">
-                {NAV.map((id, i) => (
-                  <li key={id}>
-                    <a
-                      href={`#${id}`}
-                      onClick={go(id)}
-                      aria-current={active === id ? 'true' : undefined}
-                      className={cn(
-                        'flex items-center gap-3 rounded-lg px-3 py-3 text-base transition-colors',
-                        active === id ? 'bg-surface-2 text-fg' : 'text-muted hover:text-fg',
-                      )}
-                    >
-                      <span className="font-mono text-xs text-accent">
-                        {String(i + 1).padStart(2, '0')}
-                      </span>
-                      {t(`nav.${id}`)}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </m.nav>
+        {/* Transição em CSS (grid-rows): animar height:auto com o Framer Motion
+            restaurava a posição de rolagem e cancelava a navegação no mobile. */}
+        <nav
+          id="mobile-nav"
+          aria-label={t('a11y.mainNav')}
+          ref={mobileNavRef}
+          className={cn(
+            'grid transition-[grid-template-rows,opacity,visibility] duration-300 ease-out-expo lg:hidden',
+            open ? 'visible grid-rows-[1fr] opacity-100' : 'invisible grid-rows-[0fr] opacity-0',
           )}
-        </AnimatePresence>
+        >
+          <ul className="container-page flex min-h-0 flex-col gap-1 overflow-hidden">
+            {NAV.map((id, i) => (
+              <li key={id} className={i === NAV.length - 1 ? 'pb-4' : undefined}>
+                <a
+                  href={`#${id}`}
+                  onClick={go(id)}
+                  aria-current={active === id ? 'true' : undefined}
+                  className={cn(
+                    'flex items-center gap-3 rounded-lg px-3 py-3 text-base transition-colors',
+                    active === id ? 'bg-surface-2 text-fg' : 'text-muted hover:text-fg',
+                  )}
+                >
+                  <span className="font-mono text-xs text-accent">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  {t(`nav.${id}`)}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
     </header>
   )
