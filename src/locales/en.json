@@ -134,9 +134,7 @@
       "items": {
         "go-learning": "Going through the official Go language tour. Code examples and exercises.",
         "rest-api-learning": "Going through REST API consumption using JSONPlaceholder. Code examples.",
-        "curso-nodejs": "Node.js course with professor Victor Lima (16h) — EAD Education.",
-        "imersao-front-end": "Project from Alura's Front-End Immersion.",
-        "cv-online": "Previous version of this website: a digital résumé."
+        "curso-nodejs": "Node.js course with professor Victor Lima (16h) — EAD Education."
       }
     }
   },

@@ -52,16 +52,4 @@ export const labProjects: LabProject[] = [
     language: 'JavaScript',
     repo: 'https://github.com/lukinhapdm/Curso-NodeJs',
   },
-  {
-    id: 'imersao-front-end',
-    name: 'Imersao-Front-End',
-    language: 'CSS',
-    repo: 'https://github.com/lukinhapdm/Imersao-Front-End',
-  },
-  {
-    id: 'cv-online',
-    name: 'CV-Online',
-    language: 'HTML',
-    repo: 'https://github.com/lukinhapdm/CV-Online',
-  },
 ]

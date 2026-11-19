@@ -134,9 +134,7 @@
       "items": {
         "go-learning": "Percorrendo o tour oficial da linguagem Go, com exemplos e exercícios.",
         "rest-api-learning": "Consumo de REST API usando JSONPlaceholder, com exemplos de código.",
-        "curso-nodejs": "Curso de Node.js com o professor Victor Lima (16h) — EAD Education.",
-        "imersao-front-end": "Projeto da Imersão Front-End da Alura.",
-        "cv-online": "Versão anterior deste site: currículo em formato digital."
+        "curso-nodejs": "Curso de Node.js com o professor Victor Lima (16h) — EAD Education."
       }
     }
   },
