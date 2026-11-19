@@ -20,7 +20,7 @@ export function Section({ id, children, className, heading }: SectionProps) {
       id={id}
       tabIndex={-1}
       aria-labelledby={heading ? `${id}-title` : undefined}
-      className={cn('relative scroll-mt-20 py-24 outline-none md:py-32', className)}
+      className={cn('relative py-24 outline-none md:py-32', className)}
     >
       <div className="container-page">
         {heading && (
