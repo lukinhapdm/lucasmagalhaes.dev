@@ -1,0 +1,245 @@
+{
+  "meta": {
+    "title": "Lucas Magalhães — Full Stack Developer",
+    "description": "Portfolio and résumé of Lucas Pinto de Magalhães, Full Stack Developer (Python, Go, React, Node.js) and Computer Engineer. Applied AI with RAG + LLM."
+  },
+  "a11y": {
+    "skip": "Skip to content",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "toggleTheme": "Toggle light/dark theme",
+    "switchLang": "Mudar para Português",
+    "openPalette": "Open command palette",
+    "backToTop": "Back to top",
+    "mainNav": "Main navigation",
+    "newTab": "(opens in a new tab)",
+    "terminal": "Illustrative terminal presenting my stack"
+  },
+  "nav": {
+    "hero": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "roles": ["Full Stack Developer", "Go • React • Node.js", "Applied AI (RAG + LLM)"],
+    "tagline": "Computer Engineer building web products from server to interface — focused on performance, data and applied AI.",
+    "ctaProjects": "View projects",
+    "ctaCv": "Download CV",
+    "scroll": "Scroll to explore"
+  },
+  "about": {
+    "eyebrow": "about",
+    "title": "From server to interface, with real engineering.",
+    "paragraphs": [
+      "I'm a Full Stack Web Developer at Agência Gecko Digital and a Computer Engineer from UNIFEI, with a technical degree in Mechatronics from ETEP.",
+      "I architect and maintain digital ecosystems: CMS, server infrastructure, tracking with Google Tag Manager and customer service chatbots.",
+      "For my thesis I built an AI health chatbot (RAG + LLM), and I'm currently building an application with Go, PostgreSQL and Docker to deepen my back-end, containerization and data modeling skills."
+    ],
+    "stats": {
+      "years": "years as a professional full stack dev",
+      "experiences": "professional experiences",
+      "technologies": "technologies in daily use",
+      "ai": "AI project applied to healthcare"
+    }
+  },
+  "experience": {
+    "eyebrow": "experience",
+    "title": "Where I've been building.",
+    "current": "Current",
+    "present": "present",
+    "items": {
+      "gecko": {
+        "role": "Full Stack Web Developer",
+        "summary": "Architecture and maintenance of digital ecosystems for the agency's clients.",
+        "highlights": [
+          "WordPress development and customization",
+          "Server infrastructure and corporate email management",
+          "Advanced tracking with Google Tag Manager",
+          "Customer service chatbot integration focused on scalability and performance"
+        ]
+      },
+      "atlas": {
+        "role": "IT Director → Marketing Manager",
+        "kind": "Junior Enterprise",
+        "summary": "Co-founder and first IT director of the junior enterprise.",
+        "highlights": [
+          "Created the IT board's service portfolio",
+          "Trained members, managed teams and negotiated with clients",
+          "Later took over as marketing manager"
+        ]
+      },
+      "up": {
+        "role": "IT Associate",
+        "kind": "Junior Enterprise",
+        "summary": "Web and desktop solutions for clients.",
+        "highlights": [
+          "Built the website for the ExpoJob event",
+          "Created the graphical interface (Python) for Buffet Gut's sales software"
+        ]
+      },
+      "powerblade": {
+        "role": "Laboratory Technician",
+        "kind": "Internship",
+        "summary": "Technical support in an electronics laboratory.",
+        "highlights": [
+          "Technical analysis and maintenance of UPS units",
+          "Laboratory organization and customer service"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "projects",
+    "title": "Things I've built.",
+    "status": {
+      "done": "Completed",
+      "wip": "In development",
+      "ongoing": "Ongoing"
+    },
+    "repo": "Repository",
+    "repoSoon": "Repository coming soon",
+    "items": {
+      "rag": {
+        "title": "Health RAG Chatbot",
+        "description": "Retrieval-Augmented Generation chatbot powered by an LLM that answers questions about COVID-19 and health units in Itabira/MG, grounded in official sources.",
+        "badge": "Thesis · Computer Engineering"
+      },
+      "goapp": {
+        "title": "Go Application",
+        "description": "Go back-end with PostgreSQL and Docker to deepen containerization and data modeling."
+      },
+      "buffet": {
+        "title": "Sales Software — Buffet Gut's",
+        "description": "Python desktop software (GUI). Pioneer project that enabled the official founding of the ATLAS junior enterprise."
+      },
+      "gecko": {
+        "title": "Professional work — Gecko",
+        "description": "Client websites and digital ecosystems with WordPress, infrastructure and GTM tracking.",
+        "placeholder": "Client case coming soon"
+      }
+    },
+    "chat": {
+      "question": "Where can I get the COVID-19 vaccine in Itabira?",
+      "answer": "You can get vaccinated at the city's Primary Health Units. Check opening hours and required documents…",
+      "source": "source: Itabira City Hall"
+    },
+    "lab": {
+      "title": "Lab",
+      "subtitle": "Studies, courses and experiments.",
+      "items": {
+        "go-learning": "Going through the official Go language tour. Code examples and exercises.",
+        "rest-api-learning": "Going through REST API consumption using JSONPlaceholder. Code examples.",
+        "curso-nodejs": "Node.js course with professor Victor Lima (16h) — EAD Education.",
+        "imersao-front-end": "Project from Alura's Front-End Immersion.",
+        "cv-online": "Previous version of this website: a digital résumé."
+      }
+    }
+  },
+  "skills": {
+    "eyebrow": "skills",
+    "title": "Tools of the trade.",
+    "groups": {
+      "frontend": "Front-end",
+      "backend": "Back-end",
+      "database": "Databases",
+      "ai": "AI",
+      "devops": "DevOps & Infra",
+      "analytics": "Analytics",
+      "soft": "Soft skills"
+    }
+  },
+  "terms": {
+    "servers": "Servers",
+    "corporateEmail": "Corporate email",
+    "dataAnalysis": "Data analysis",
+    "chatbots": "Chatbots",
+    "leadership": "Leadership",
+    "communication": "Assertive communication",
+    "projectManagement": "Project management",
+    "teamwork": "Teamwork",
+    "itManagement": "IT management",
+    "negotiation": "Negotiation",
+    "ups": "UPS units",
+    "support": "Technical support"
+  },
+  "education": {
+    "eyebrow": "education",
+    "title": "Education & certifications.",
+    "degreesTitle": "Academic background",
+    "certsTitle": "Certifications",
+    "languagesTitle": "Languages",
+    "awardsTitle": "Awards & activities",
+    "degrees": {
+      "unifei": "B.Eng. Computer Engineering",
+      "etep": "Mechatronics Technician"
+    },
+    "certs": {
+      "efset": "EF SET English Certificate — 69/100 (C1 Advanced)",
+      "python": "Python Fundamentals 1 & 2",
+      "alura": "Front-End Immersion",
+      "sixsigma": "White Belt Six Sigma"
+    },
+    "languages": {
+      "pt": "Portuguese",
+      "en": "English"
+    },
+    "levels": {
+      "native": "Native",
+      "C1": "Advanced (C1)"
+    },
+    "awards": {
+      "mechatronics": {
+        "title": "Best Mechatronics Project",
+        "description": "Electro-hydraulic therapeutic bed controlled by Arduino and desktop software."
+      },
+      "botaPraFazer": {
+        "title": "Bota pra Fazer — UNIFEI",
+        "description": "Social project at APAE Itabira."
+      },
+      "gera": {
+        "title": "GERA robotics group",
+        "description": "Built a line-following robot."
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "contact",
+    "title": "Let's build something together?",
+    "description": "Open to opportunities, projects and good conversations about technology. The fastest way to reach me is by email.",
+    "copy": "Copy email",
+    "send": "Send email",
+    "location": "Location"
+  },
+  "palette": {
+    "placeholder": "Type a command or search…",
+    "empty": "No results.",
+    "groups": {
+      "navigate": "Navigate",
+      "actions": "Actions",
+      "links": "Links"
+    },
+    "goTo": "Go to",
+    "toggleTheme": "Toggle theme",
+    "toggleLang": "Switch language to Português",
+    "copyEmail": "Copy email",
+    "downloadCv": "Download CV",
+    "openGithub": "Open GitHub",
+    "openLinkedin": "Open LinkedIn",
+    "hintNavigate": "navigate",
+    "hintSelect": "select",
+    "hintClose": "close"
+  },
+  "toast": {
+    "emailCopied": "Email copied to clipboard!",
+    "copyFailed": "Couldn't copy. Use the email link instead."
+  },
+  "footer": {
+    "built": "Built with React, TypeScript & Tailwind.",
+    "tip": "Tip: press"
+  }
+}

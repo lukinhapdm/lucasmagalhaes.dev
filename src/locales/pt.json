@@ -1,0 +1,245 @@
+{
+  "meta": {
+    "title": "Lucas Magalhães — Desenvolvedor Full Stack",
+    "description": "Portfólio e currículo de Lucas Pinto de Magalhães, Desenvolvedor Full Stack (Python, Go, React, Node.js) e Engenheiro de Computação. IA aplicada com RAG + LLM."
+  },
+  "a11y": {
+    "skip": "Pular para o conteúdo",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "toggleTheme": "Alternar tema claro/escuro",
+    "switchLang": "Switch to English",
+    "openPalette": "Abrir paleta de comandos",
+    "backToTop": "Voltar ao topo",
+    "mainNav": "Navegação principal",
+    "newTab": "(abre em nova aba)",
+    "terminal": "Terminal ilustrativo apresentando minha stack"
+  },
+  "nav": {
+    "hero": "Início",
+    "about": "Sobre",
+    "experience": "Experiência",
+    "projects": "Projetos",
+    "skills": "Skills",
+    "education": "Formação",
+    "contact": "Contato"
+  },
+  "hero": {
+    "greeting": "Olá, eu sou",
+    "roles": ["Full Stack Developer", "Go • React • Node.js", "IA aplicada (RAG + LLM)"],
+    "tagline": "Engenheiro de Computação construindo produtos web do servidor à interface — com foco em performance, dados e IA aplicada.",
+    "ctaProjects": "Ver projetos",
+    "ctaCv": "Baixar CV",
+    "scroll": "Role para explorar"
+  },
+  "about": {
+    "eyebrow": "sobre",
+    "title": "Do servidor à interface, com engenharia de verdade.",
+    "paragraphs": [
+      "Sou Desenvolvedor Web Full Stack na Agência Gecko Digital e Engenheiro de Computação pela UNIFEI, com formação técnica em Mecatrônica pela ETEP.",
+      "Atuo na arquitetura e sustentação de ecossistemas digitais: CMS, infraestrutura de servidores, rastreamento com Google Tag Manager e chatbots de atendimento.",
+      "Desenvolvi como TCC um chatbot de saúde com IA (RAG + LLM) e hoje construo uma aplicação em Go, PostgreSQL e Docker para aprofundar back-end, conteinerização e modelagem de dados."
+    ],
+    "stats": {
+      "years": "anos como dev full stack profissional",
+      "experiences": "experiências profissionais",
+      "technologies": "tecnologias no dia a dia",
+      "ai": "projeto de IA aplicado à saúde"
+    }
+  },
+  "experience": {
+    "eyebrow": "experiência",
+    "title": "Onde venho construindo.",
+    "current": "Atual",
+    "present": "atual",
+    "items": {
+      "gecko": {
+        "role": "Desenvolvedor Web Full Stack",
+        "summary": "Arquitetura e sustentação de ecossistemas digitais para clientes da agência.",
+        "highlights": [
+          "Desenvolvimento e customização de sites WordPress",
+          "Gestão de infraestrutura de servidores e e-mail corporativo",
+          "Rastreamento avançado via Google Tag Manager",
+          "Integração de chatbots de atendimento com foco em escalabilidade e performance"
+        ]
+      },
+      "atlas": {
+        "role": "Diretor de TI → Gerente de Marketing",
+        "kind": "Empresa Júnior",
+        "summary": "Co-fundador e primeiro diretor de TI da empresa júnior.",
+        "highlights": [
+          "Criou o portfólio de serviços da diretoria de TI",
+          "Capacitou membros, geriu equipes e negociou com clientes",
+          "Assumiu depois a gerência de marketing"
+        ]
+      },
+      "up": {
+        "role": "Associado de TI",
+        "kind": "Empresa Júnior",
+        "summary": "Desenvolvimento de soluções web e desktop para clientes.",
+        "highlights": [
+          "Desenvolveu o site do evento ExpoJob",
+          "Criou a interface gráfica (Python) do software de vendas do Buffet Gut's"
+        ]
+      },
+      "powerblade": {
+        "role": "Técnico de Laboratório",
+        "kind": "Estágio",
+        "summary": "Suporte técnico em laboratório de eletrônica.",
+        "highlights": [
+          "Análises técnicas e manutenção de no-breaks",
+          "Organização do laboratório e atendimento ao cliente"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "projetos",
+    "title": "Coisas que construí.",
+    "status": {
+      "done": "Concluído",
+      "wip": "Em desenvolvimento",
+      "ongoing": "Em andamento"
+    },
+    "repo": "Repositório",
+    "repoSoon": "Repositório em breve",
+    "items": {
+      "rag": {
+        "title": "Chatbot RAG para Saúde",
+        "description": "Chatbot com Retrieval-Augmented Generation e LLM que responde perguntas sobre COVID-19 e unidades de saúde de Itabira/MG, com respostas fundamentadas em fontes oficiais.",
+        "badge": "TCC · Engenharia de Computação"
+      },
+      "goapp": {
+        "title": "Aplicação Go",
+        "description": "Back-end em Go com PostgreSQL e Docker para aprofundar conteinerização e modelagem de dados."
+      },
+      "buffet": {
+        "title": "Software de Vendas — Buffet Gut's",
+        "description": "Software desktop em Python (GUI). Projeto pioneiro que viabilizou a oficialização da empresa júnior ATLAS."
+      },
+      "gecko": {
+        "title": "Trabalhos profissionais — Gecko",
+        "description": "Sites e ecossistemas digitais de clientes, com WordPress, infraestrutura e rastreamento via GTM.",
+        "placeholder": "Case de cliente em breve"
+      }
+    },
+    "chat": {
+      "question": "Onde posso tomar a vacina contra COVID-19 em Itabira?",
+      "answer": "Você pode se vacinar nas Unidades Básicas de Saúde do município. Confira horários e documentos necessários…",
+      "source": "fonte: Prefeitura de Itabira"
+    },
+    "lab": {
+      "title": "Laboratório",
+      "subtitle": "Estudos, cursos e experimentos.",
+      "items": {
+        "go-learning": "Percorrendo o tour oficial da linguagem Go, com exemplos e exercícios.",
+        "rest-api-learning": "Consumo de REST API usando JSONPlaceholder, com exemplos de código.",
+        "curso-nodejs": "Curso de Node.js com o professor Victor Lima (16h) — EAD Education.",
+        "imersao-front-end": "Projeto da Imersão Front-End da Alura.",
+        "cv-online": "Versão anterior deste site: currículo em formato digital."
+      }
+    }
+  },
+  "skills": {
+    "eyebrow": "skills",
+    "title": "Ferramentas do ofício.",
+    "groups": {
+      "frontend": "Front-end",
+      "backend": "Back-end",
+      "database": "Banco de dados",
+      "ai": "IA",
+      "devops": "DevOps & Infra",
+      "analytics": "Analytics",
+      "soft": "Soft skills"
+    }
+  },
+  "terms": {
+    "servers": "Servidores",
+    "corporateEmail": "E-mail corporativo",
+    "dataAnalysis": "Análise de dados",
+    "chatbots": "Chatbots",
+    "leadership": "Liderança",
+    "communication": "Comunicação assertiva",
+    "projectManagement": "Gestão de projetos",
+    "teamwork": "Trabalho em equipe",
+    "itManagement": "Gestão de TI",
+    "negotiation": "Negociação",
+    "ups": "No-breaks",
+    "support": "Suporte técnico"
+  },
+  "education": {
+    "eyebrow": "formação",
+    "title": "Formação & certificações.",
+    "degreesTitle": "Formação acadêmica",
+    "certsTitle": "Certificações",
+    "languagesTitle": "Idiomas",
+    "awardsTitle": "Prêmios & atividades",
+    "degrees": {
+      "unifei": "Engenharia de Computação",
+      "etep": "Técnico em Mecatrônica"
+    },
+    "certs": {
+      "efset": "EF SET English Certificate — 69/100 (C1 Advanced)",
+      "python": "Python Fundamental 1 e 2",
+      "alura": "Imersão Front-End",
+      "sixsigma": "White Belt Six Sigma"
+    },
+    "languages": {
+      "pt": "Português",
+      "en": "Inglês"
+    },
+    "levels": {
+      "native": "Nativo",
+      "C1": "Avançado (C1)"
+    },
+    "awards": {
+      "mechatronics": {
+        "title": "Melhor Projeto de Mecatrônica",
+        "description": "Cama terapêutica eletro-hidráulica controlada por Arduino e software desktop."
+      },
+      "botaPraFazer": {
+        "title": "Bota pra Fazer — UNIFEI",
+        "description": "Projeto social na APAE Itabira."
+      },
+      "gera": {
+        "title": "Grupo de robótica GERA",
+        "description": "Desenvolvimento de robô seguidor de linha."
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "contato",
+    "title": "Vamos construir algo juntos?",
+    "description": "Aberto a oportunidades, projetos e boas conversas sobre tecnologia. A forma mais rápida de falar comigo é por e-mail.",
+    "copy": "Copiar e-mail",
+    "send": "Enviar e-mail",
+    "location": "Localização"
+  },
+  "palette": {
+    "placeholder": "Digite um comando ou busque…",
+    "empty": "Nenhum resultado.",
+    "groups": {
+      "navigate": "Navegar",
+      "actions": "Ações",
+      "links": "Links"
+    },
+    "goTo": "Ir para",
+    "toggleTheme": "Alternar tema",
+    "toggleLang": "Mudar idioma para English",
+    "copyEmail": "Copiar e-mail",
+    "downloadCv": "Baixar CV",
+    "openGithub": "Abrir GitHub",
+    "openLinkedin": "Abrir LinkedIn",
+    "hintNavigate": "navegar",
+    "hintSelect": "selecionar",
+    "hintClose": "fechar"
+  },
+  "toast": {
+    "emailCopied": "E-mail copiado para a área de transferência!",
+    "copyFailed": "Não foi possível copiar. Use o link de e-mail."
+  },
+  "footer": {
+    "built": "Feito com React, TypeScript & Tailwind.",
+    "tip": "Dica: pressione"
+  }
+}
