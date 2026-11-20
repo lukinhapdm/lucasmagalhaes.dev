@@ -10,7 +10,7 @@ export const projects: Project[] = [
     id: 'rag',
     icon: 'bot',
     featured: true,
-    tags: ['Python', 'LLM', 'RAG', 'Jupyter'],
+    tags: ['Python', 'LLM', 'RAG', 'Prompt engineering', 'Jupyter'],
     status: 'done',
     repo: 'https://github.com/lukinhapdm/rag-llm-chatbot-saude',
   },
