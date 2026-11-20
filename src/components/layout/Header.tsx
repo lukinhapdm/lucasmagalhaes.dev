@@ -1,6 +1,7 @@
 import { Languages, Menu, Moon, Sun, X } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { LanguageHint } from '@/components/layout/LanguageHint'
 import { IconButton } from '@/components/ui/Button'
 import { useActiveSection } from '@/hooks/useActiveSection'
 import { useTheme } from '@/hooks/useTheme'
@@ -131,17 +132,20 @@ export function Header({ onOpenPalette, onPreloadPalette, onPreloadProjects }: H
               <kbd className="font-mono">{modKeyLabel}</kbd>
               <kbd className="font-mono">K</kbd>
             </button>
-            <IconButton
-              onClick={toggleLanguage}
-              title={t('a11y.switchLang')}
-              className="w-auto gap-1 px-2"
-            >
-              <Languages aria-hidden className="size-4" />
-              <span aria-hidden className="font-mono text-xs uppercase">
-                {i18n.language === 'pt' ? 'en' : 'pt'}
-              </span>
-              <span className="sr-only">{t('a11y.switchLang')}</span>
-            </IconButton>
+            <div className="relative">
+              <IconButton
+                onClick={toggleLanguage}
+                title={t('a11y.switchLang')}
+                className="w-auto gap-1 px-2"
+              >
+                <Languages aria-hidden className="size-4" />
+                <span aria-hidden className="font-mono text-xs uppercase">
+                  {i18n.language === 'pt' ? 'en' : 'pt'}
+                </span>
+                <span className="sr-only">{t('a11y.switchLang')}</span>
+              </IconButton>
+              <LanguageHint />
+            </div>
             <IconButton onClick={toggleTheme} aria-label={t('a11y.toggleTheme')}>
               {theme === 'dark' ? (
                 <Sun aria-hidden className="size-4" />

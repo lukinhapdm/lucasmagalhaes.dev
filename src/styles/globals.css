@@ -207,6 +207,21 @@
   filter: saturate(0.4);
 }
 
+/* Destaque do botão de idioma ao carregar o site */
+@keyframes lang-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 color-mix(in oklab, var(--accent-from) 0%, transparent);
+  }
+  50% {
+    box-shadow: 0 0 0 4px color-mix(in oklab, var(--accent-from) 35%, transparent);
+  }
+}
+.lang-glow {
+  border: 1px solid color-mix(in oklab, var(--accent-from) 70%, transparent);
+  animation: lang-glow 1.4s ease-in-out 3;
+}
+
 /* Cursor piscante */
 @keyframes blink {
   50% {
