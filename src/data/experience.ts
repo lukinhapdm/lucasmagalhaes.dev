@@ -1,7 +1,8 @@
 import type { Experience } from '@/types/content'
 
 /**
- * Ordem: mais recente primeiro. Textos em `locales/*.json` → `experience.items.<id>`.
+ * Ordem: mais recente primeiro. Itens com `during` são experiências obtidas durante
+ * a formação (graduação/curso técnico) e aparecem agrupadas em um bloco compacto. Textos em `locales/*.json` → `experience.items.<id>`.
  * Tags que começam com letra minúscula são chaves traduzidas em `terms.<tag>`.
  */
 export const experience: Experience[] = [
@@ -19,7 +20,7 @@ export const experience: Experience[] = [
     start: '2016-12',
     end: '2019-01',
     location: 'Itabira/MG',
-    tags: ['itManagement', 'leadership', 'Marketing', 'negotiation'],
+    during: 'UNIFEI',
   },
   {
     id: 'up',
@@ -27,7 +28,7 @@ export const experience: Experience[] = [
     start: '2016-03',
     end: '2016-12',
     location: 'Itabira/MG',
-    tags: ['Python', 'GUI', 'HTML', 'CSS'],
+    during: 'UNIFEI',
   },
   {
     id: 'powerblade',
@@ -35,6 +36,6 @@ export const experience: Experience[] = [
     start: '2015-05',
     end: '2015-08',
     location: 'São José dos Campos/SP',
-    tags: ['Hardware', 'ups', 'support'],
+    during: 'ETEP',
   },
 ]

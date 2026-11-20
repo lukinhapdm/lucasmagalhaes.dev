@@ -44,7 +44,12 @@ export interface Experience {
   /** `null` = emprego atual. */
   end: YearMonth | null
   location: string
-  tags: string[]
+  tags?: string[]
+  /**
+   * Instituição de ensino quando a experiência aconteceu durante a formação
+   * (empresa júnior, estágio). Essas aparecem agrupadas e em versão compacta.
+   */
+  during?: string
 }
 
 export type ProjectStatus = 'done' | 'wip' | 'ongoing'
