@@ -229,6 +229,7 @@
     "selfStudy": {
       "badge": "Self-study",
       "items": {
+        "frontendImmersion": "Front-End Immersion — Alura",
         "ddd": "Domain-Driven Design (DDD)",
         "ragFineTuning": "RAG and LLM fine-tuning",
         "promptEngineering": "Prompt engineering"

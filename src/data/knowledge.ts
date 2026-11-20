@@ -31,6 +31,7 @@ export const knowledgeAreas: KnowledgeArea[] = [
 
 /** Estudos feitos por conta própria: entram na lista do card da área, com selo próprio. */
 export const selfStudies: SelfStudy[] = [
+  { id: 'frontendImmersion', area: 'interfaces' },
   { id: 'ddd', area: 'engineering' },
   { id: 'ragFineTuning', area: 'data' },
   { id: 'promptEngineering', area: 'data' },
