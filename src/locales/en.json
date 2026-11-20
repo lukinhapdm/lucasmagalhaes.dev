@@ -242,6 +242,12 @@
           "domainEvents": "Domain events"
         }
       }
+    },
+    "carousel": {
+      "label": "Knowledge areas",
+      "prev": "Previous",
+      "next": "Next",
+      "page": "Go to page {{n}} of {{total}}"
     }
   },
   "terms": {
@@ -287,10 +293,6 @@
       "botaPraFazer": {
         "title": "Bota pra Fazer — UNIFEI",
         "description": "Social project at APAE Itabira."
-      },
-      "gera": {
-        "title": "GERA robotics group",
-        "description": "Built a line-following robot."
       }
     }
   },

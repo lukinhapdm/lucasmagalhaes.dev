@@ -242,6 +242,12 @@
           "domainEvents": "Eventos de domínio"
         }
       }
+    },
+    "carousel": {
+      "label": "Áreas de conhecimento",
+      "prev": "Anterior",
+      "next": "Próximo",
+      "page": "Ir para a página {{n}} de {{total}}"
     }
   },
   "terms": {
@@ -287,10 +293,6 @@
       "botaPraFazer": {
         "title": "Bota pra Fazer — UNIFEI",
         "description": "Projeto social na APAE Itabira."
-      },
-      "gera": {
-        "title": "Grupo de robótica GERA",
-        "description": "Desenvolvimento de robô seguidor de linha."
       }
     }
   },
