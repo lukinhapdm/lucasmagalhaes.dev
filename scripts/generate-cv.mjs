@@ -26,7 +26,7 @@ const cv = {
   pt: {
     lang: 'pt-BR',
     title: 'Desenvolvedor Full Stack',
-    stack: 'Python • Go • React • Node.js · PostgreSQL • MongoDB • Docker',
+    stack: 'Python • Go • React • Node.js · PostgreSQL • MongoDB',
     location: 'São José dos Campos/SP — disponível para mudança',
     labels: {
       summary: 'Resumo',
@@ -77,8 +77,8 @@ const cv = {
     projects: [
       {
         name: 'Chatbot RAG para Saúde',
-        tags: 'Python · Google Gemini · LLM · RAG',
-        text: 'TCC em Engenharia de Computação: chatbot em Python que usa o modelo Gemini (LLM) com Retrieval-Augmented Generation (RAG) para responder dúvidas sobre COVID-19 e unidades de saúde de Itabira/MG, com respostas fundamentadas em fontes oficiais.',
+        tags: 'Python · Google Gemini · LLM · RAG · Prompt engineering',
+        text: 'TCC em Engenharia de Computação: chatbot em Python que usa o modelo Gemini (LLM), com Retrieval-Augmented Generation (RAG) e prompt engineering, para responder dúvidas sobre COVID-19 e unidades de saúde de Itabira/MG com base em fontes oficiais.',
       },
     ],
     skills: [
@@ -121,7 +121,7 @@ const cv = {
   en: {
     lang: 'en',
     title: 'Full Stack Developer',
-    stack: 'Python • Go • React • Node.js · PostgreSQL • MongoDB • Docker',
+    stack: 'Python • Go • React • Node.js · PostgreSQL • MongoDB',
     location: 'São José dos Campos, Brazil — open to relocation',
     labels: {
       summary: 'Summary',
@@ -172,8 +172,8 @@ const cv = {
     projects: [
       {
         name: 'Health RAG Chatbot',
-        tags: 'Python · Google Gemini · LLM · RAG',
-        text: 'Computer Engineering thesis: a Python chatbot that uses the Gemini model (LLM) with Retrieval-Augmented Generation (RAG) to answer questions about COVID-19 and health units in Itabira, Brazil, with answers grounded in official sources.',
+        tags: 'Python · Google Gemini · LLM · RAG · Prompt engineering',
+        text: 'Computer Engineering thesis: a Python chatbot built on the Gemini model (LLM), using Retrieval-Augmented Generation (RAG) and prompt engineering to answer questions about COVID-19 and health units in Itabira, Brazil, based on official sources.',
       },
     ],
     skills: [
