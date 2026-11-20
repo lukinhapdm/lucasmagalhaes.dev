@@ -14,5 +14,4 @@ export const languages: LanguageSkill[] = [
 export const awards: Award[] = [
   { id: 'mechatronics', year: 2014 },
   { id: 'botaPraFazer', year: 2019 },
-  { id: 'gera' },
 ]
