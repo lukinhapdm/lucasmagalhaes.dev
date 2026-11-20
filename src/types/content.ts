@@ -62,8 +62,29 @@ export interface Project {
   repo?: string
   url?: string
   featured?: boolean
-  /** Ícone (nome exportado de lucide-react, ver `components/ui/ProjectIcon`). */
+  /** Telas do projeto, exibidas como galeria no card. */
+  gallery?: ProjectImage[]
+  /** Sites publicados (trabalhos para clientes), exibidos com prévia. */
+  showcase?: ShowcaseSite[]
+  /** Ícone do card (ver `icons` em `components/projects/ProjectCards.tsx`). */
   icon: 'bot' | 'server' | 'shopping' | 'briefcase' | 'newspaper'
+}
+
+export interface ProjectImage {
+  /** Caminho em /public (ex.: "/projects/nodeblog/home.webp"), 1280x800. */
+  src: string
+  /** Chave do rótulo/alt em `projects.items.<id>.images.<key>`. */
+  key: string
+  /** Endereço exibido na barra do navegador (ex.: "localhost:8081/admin"). */
+  address: string
+}
+
+export interface ShowcaseSite {
+  /** Chave da legenda em `projects.items.<projeto>.showcase.<id>`. */
+  id: string
+  url: string
+  /** Captura da página inicial em /public, 1280x800. */
+  image: string
 }
 
 export interface LabProject {

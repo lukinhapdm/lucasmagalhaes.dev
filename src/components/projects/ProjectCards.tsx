@@ -1,7 +1,9 @@
 import { m } from 'framer-motion'
-import { ArrowUpRight, Bot, Briefcase, Lock, Newspaper, Server, ShoppingCart } from 'lucide-react'
+import { ArrowUpRight, Bot, Briefcase, Newspaper, Server, ShoppingCart } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { GithubIcon } from '@/components/icons/BrandIcons'
+import { BrowserFrame, Screenshot } from '@/components/projects/BrowserFrame'
+import { ScreenshotGallery } from '@/components/projects/ScreenshotGallery'
 import { Card } from '@/components/ui/Card'
 import { Chip } from '@/components/ui/Chip'
 import { ExternalLink } from '@/components/ui/ExternalLink'
@@ -87,7 +89,6 @@ export function ProjectCard({ project, className }: { project: Project; classNam
   const Icon = icons[project.icon]
   const key = `projects.items.${project.id}`
   const badge = t(`${key}.badge`, { defaultValue: '' })
-  const isClientWork = project.id === 'gecko'
 
   return (
     <m.article variants={fadeUp} className={cn('h-full', className)}>
@@ -122,19 +123,31 @@ export function ProjectCard({ project, className }: { project: Project; classNam
 
         {project.featured && <ChatMock />}
 
-        {isClientWork && (
-          <div className="mt-5 grid gap-3 sm:grid-cols-2">
-            {[1, 2].map((n) => (
-              <div
-                key={n}
-                className="flex items-center gap-2 rounded-xl border border-dashed border-border-strong px-4 py-3 font-mono text-xs text-muted"
+        {project.gallery && <ScreenshotGallery projectId={project.id} images={project.gallery} />}
+
+        {project.showcase?.map((site) => (
+          <div key={site.id} className="mt-6">
+            <ExternalLink href={site.url} className="group/site block">
+              <BrowserFrame
+                address={new URL(site.url).host}
+                className="transition-[border-color] duration-200 group-hover/site:border-accent/50"
               >
-                <Lock aria-hidden className="size-3.5" />
-                {t(`${key}.placeholder`)}
-              </div>
-            ))}
+                <Screenshot
+                  src={site.image}
+                  alt={t(`${key}.showcase.${site.id}`)}
+                  className="transition-transform duration-500 ease-out-expo group-hover/site:scale-[1.03]"
+                />
+              </BrowserFrame>
+              <span className="mt-3 flex items-center justify-between gap-3 text-sm">
+                <span className="text-fg">{t(`${key}.showcase.${site.id}`)}</span>
+                <span className="inline-flex shrink-0 items-center gap-1 font-medium text-muted transition-colors group-hover/site:text-accent">
+                  {t('projects.visit')}
+                  <ArrowUpRight aria-hidden className="size-4" />
+                </span>
+              </span>
+            </ExternalLink>
           </div>
-        )}
+        ))}
 
         <div className="mt-auto flex flex-wrap items-end justify-between gap-4 pt-6">
           <ul className="flex flex-wrap gap-1.5" aria-label="Stack">
