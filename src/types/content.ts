@@ -125,6 +125,8 @@ export interface LanguageSkill {
   /** Chave em `education.languages.<id>`. */
   id: string
   level: string
+  /** Certificado que comprova o nível: chave de `education.certs.<id>`. */
+  certificate?: string
 }
 
 export interface Award {

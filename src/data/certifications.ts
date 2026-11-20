@@ -1,7 +1,6 @@
 import type { Award, Certification, LanguageSkill } from '@/types/content'
 
 export const certifications: Certification[] = [
-  { id: 'efset', issuer: 'EF SET' },
   { id: 'python', issuer: 'Python Fundamental' },
   { id: 'alura', issuer: 'Alura', year: 2024 },
   { id: 'sixsigma', issuer: 'Six Sigma', year: 2021 },
@@ -9,7 +8,7 @@ export const certifications: Certification[] = [
 
 export const languages: LanguageSkill[] = [
   { id: 'pt', level: 'native' },
-  { id: 'en', level: 'C1' },
+  { id: 'en', level: 'C1', certificate: 'efset' },
 ]
 
 export const awards: Award[] = [

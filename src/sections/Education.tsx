@@ -71,11 +71,19 @@ export function Education() {
         >
           <ul className="space-y-3">
             {languages.map((l) => (
-              <li key={l.id} className="flex items-center justify-between gap-4 text-sm">
-                <span className="text-fg">{t(`education.languages.${l.id}`)}</span>
-                <span className="rounded-md border border-border bg-surface-2/60 px-2 py-0.5 font-mono text-xs text-muted">
-                  {t(`education.levels.${l.level}`)}
-                </span>
+              <li key={l.id} className="text-sm">
+                <div className="flex items-center justify-between gap-4">
+                  <span className="text-fg">{t(`education.languages.${l.id}`)}</span>
+                  <span className="rounded-md border border-border bg-surface-2/60 px-2 py-0.5 font-mono text-xs text-muted">
+                    {t(`education.levels.${l.level}`)}
+                  </span>
+                </div>
+                {l.certificate && (
+                  <p className="mt-1.5 flex items-start gap-1.5 text-muted">
+                    <BadgeCheck aria-hidden className="mt-0.5 size-3.5 shrink-0 text-accent" />
+                    {t(`education.certs.${l.certificate}`)}
+                  </p>
+                )}
               </li>
             ))}
           </ul>
