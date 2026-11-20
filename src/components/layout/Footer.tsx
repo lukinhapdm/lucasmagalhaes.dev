@@ -2,7 +2,7 @@ import { ArrowUp } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { profile } from '@/data/profile'
 import { modKeyLabel } from '@/lib/platform'
-import { scrollToSection } from '@/lib/sections'
+import { scrollToTop } from '@/lib/sections'
 
 export function Footer() {
   const { t } = useTranslation()
@@ -20,7 +20,7 @@ export function Footer() {
           </p>
           <button
             type="button"
-            onClick={() => scrollToSection('hero')}
+            onClick={scrollToTop}
             className="inline-flex items-center gap-1.5 rounded-lg px-2 py-1 transition-colors hover:text-fg"
           >
             <ArrowUp aria-hidden className="size-4" />

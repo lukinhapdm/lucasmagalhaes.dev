@@ -7,19 +7,26 @@ import { useTheme } from '@/hooks/useTheme'
 import { cn } from '@/lib/cn'
 import { toggleLanguage } from '@/lib/i18n'
 import { modKeyLabel } from '@/lib/platform'
-import { SECTIONS, scrollToSection, type SectionId } from '@/lib/sections'
+import { ROUTES, navigate, useRoute } from '@/lib/router'
+import { NAV_ITEMS, SECTIONS, goToSection, type NavItem } from '@/lib/sections'
 
-const NAV = SECTIONS.filter((s) => s !== 'hero')
+const NAV = NAV_ITEMS
+
+/** "Projetos" abre a página dedicada; os demais itens são seções da home. */
+const hrefFor = (id: NavItem) => (id === 'projects' ? ROUTES.projects : `/#${id}`)
 
 interface HeaderProps {
   onOpenPalette: () => void
   onPreloadPalette: () => void
+  onPreloadProjects: () => void
 }
 
-export function Header({ onOpenPalette, onPreloadPalette }: HeaderProps) {
+export function Header({ onOpenPalette, onPreloadPalette, onPreloadProjects }: HeaderProps) {
   const { t, i18n } = useTranslation()
   const { theme, toggleTheme } = useTheme()
-  const active = useActiveSection(SECTIONS)
+  const route = useRoute()
+  const activeSection = useActiveSection(SECTIONS, route)
+  const active = route === ROUTES.projects ? 'projects' : activeSection
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const mobileNavRef = useRef<HTMLElement>(null)
@@ -43,11 +50,13 @@ export function Header({ onOpenPalette, onPreloadPalette }: HeaderProps) {
     return () => window.removeEventListener('keydown', onKey)
   }, [open])
 
-  function go(id: SectionId) {
-    return (e: React.MouseEvent) => {
+  function go(id: NavItem | 'hero') {
+    return (e: React.MouseEvent<HTMLAnchorElement>) => {
+      if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return
       e.preventDefault()
       setOpen(false)
-      scrollToSection(id)
+      if (id === 'projects') navigate(ROUTES.projects)
+      else goToSection(id)
     }
   }
 
@@ -68,7 +77,7 @@ export function Header({ onOpenPalette, onPreloadPalette }: HeaderProps) {
           )}
         >
           <a
-            href="#hero"
+            href="/"
             onClick={go('hero')}
             className="group flex items-center gap-2.5 font-mono text-sm"
           >
@@ -86,8 +95,9 @@ export function Header({ onOpenPalette, onPreloadPalette }: HeaderProps) {
               {NAV.map((id) => (
                 <li key={id}>
                   <a
-                    href={`#${id}`}
+                    href={hrefFor(id)}
                     onClick={go(id)}
+                    onPointerEnter={id === 'projects' ? onPreloadProjects : undefined}
                     aria-current={active === id ? 'true' : undefined}
                     className={cn(
                       'relative rounded-lg px-3 py-2 text-sm transition-colors duration-200',
@@ -170,7 +180,7 @@ export function Header({ onOpenPalette, onPreloadPalette }: HeaderProps) {
             {NAV.map((id, i) => (
               <li key={id} className={i === NAV.length - 1 ? 'pb-4' : undefined}>
                 <a
-                  href={`#${id}`}
+                  href={hrefFor(id)}
                   onClick={go(id)}
                   aria-current={active === id ? 'true' : undefined}
                   className={cn(

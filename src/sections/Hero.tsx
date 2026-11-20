@@ -11,6 +11,7 @@ import { Terminal } from '@/components/ui/Terminal'
 import { profile } from '@/data/profile'
 import { useFancyPointer } from '@/hooks/useMediaQuery'
 import { useTypewriter } from '@/hooks/useTypewriter'
+import { ROUTES, linkHandler } from '@/lib/router'
 import { scrollToSection } from '@/lib/sections'
 
 const socialIcons = { github: GithubIcon, linkedin: LinkedinIcon } as const
@@ -90,14 +91,7 @@ export function Hero() {
           </m.p>
 
           <m.div variants={fadeUp} className="mt-9 flex flex-wrap items-center gap-3">
-            <ButtonLink
-              href="#projects"
-              magnetic
-              onClick={(e) => {
-                e.preventDefault()
-                scrollToSection('projects')
-              }}
-            >
+            <ButtonLink href={ROUTES.projects} magnetic onClick={linkHandler(ROUTES.projects)}>
               {t('hero.ctaProjects')}
               <ArrowRight aria-hidden className="size-4" />
             </ButtonLink>

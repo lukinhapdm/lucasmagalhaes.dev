@@ -18,7 +18,8 @@ import { useCopyEmail } from '@/hooks/useCopyEmail'
 import { useTheme } from '@/hooks/useTheme'
 import { cn } from '@/lib/cn'
 import { toggleLanguage } from '@/lib/i18n'
-import { SECTIONS, scrollToSection } from '@/lib/sections'
+import { ROUTES, navigate } from '@/lib/router'
+import { SECTIONS, goToSection } from '@/lib/sections'
 
 type Group = 'navigate' | 'actions' | 'links'
 
@@ -76,7 +77,7 @@ function Palette({ onClose }: { onClose: () => void }) {
         label: `${t('palette.goTo')} ${t(`nav.${id}`)}`,
         icon: ArrowRight,
         movesFocus: true,
-        perform: () => scrollToSection(id),
+        perform: () => (id === 'projects' ? navigate(ROUTES.projects) : goToSection(id)),
       })),
       {
         id: 'theme',
