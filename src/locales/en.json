@@ -103,7 +103,14 @@
       "nodeblog": {
         "title": "Blog with admin panel",
         "badge": "Final project · Node.js course",
-        "description": "Node.js blog with a public area (search, categories, posts with reading time and related posts) and an admin panel with CRUD for categories, posts and users. Login with Passport and bcrypt-hashed passwords."
+        "description": "Node.js blog with a public area (search, categories, posts with reading time and related posts) and an admin panel with CRUD for categories, posts and users. Login with Passport and bcrypt-hashed passwords.",
+        "images": {
+          "home": "Home",
+          "post": "Post",
+          "admin": "Admin panel",
+          "adminPosts": "Admin: posts"
+        },
+        "imageAlt": "Blog screen: {{screen}}"
       },
       "goapp": {
         "title": "Go Application",
@@ -116,7 +123,9 @@
       "gecko": {
         "title": "Professional work — Gecko",
         "description": "Client websites and digital ecosystems with WordPress, infrastructure and GTM tracking.",
-        "placeholder": "Client case coming soon"
+        "showcase": {
+          "glas": "Glas Agência corporate website"
+        }
       }
     },
     "chat": {
@@ -143,7 +152,9 @@
       "back": "Back to home",
       "metaTitle": "Projects — Lucas Magalhães",
       "featured": "Featured"
-    }
+    },
+    "visit": "Visit website",
+    "screens": "Project screens"
   },
   "skills": {
     "eyebrow": "skills",
