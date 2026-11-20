@@ -227,11 +227,12 @@
       "operationsResearch": "Pesquisa Operacional"
     },
     "selfStudy": {
-      "badge": "Estudo independente",
+      "badge": "Independente",
       "items": {
         "webDevelopment": "Desenvolvimento Web",
         "ddd": "Domain-Driven Design (DDD)",
-        "ragFineTuning": "RAG e fine-tuning de LLMs",
+        "rag": "RAG",
+        "fineTuning": "Fine-tuning de LLMs",
         "promptEngineering": "Prompt engineering"
       }
     },

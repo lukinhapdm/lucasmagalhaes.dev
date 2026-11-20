@@ -227,11 +227,12 @@
       "operationsResearch": "Operations Research"
     },
     "selfStudy": {
-      "badge": "Self-study",
+      "badge": "Independent",
       "items": {
         "webDevelopment": "Web Development",
         "ddd": "Domain-Driven Design (DDD)",
-        "ragFineTuning": "RAG and LLM fine-tuning",
+        "rag": "RAG",
+        "fineTuning": "LLM fine-tuning",
         "promptEngineering": "Prompt engineering"
       }
     },

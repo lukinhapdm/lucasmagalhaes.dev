@@ -33,6 +33,7 @@ export const knowledgeAreas: KnowledgeArea[] = [
 export const selfStudies: SelfStudy[] = [
   { id: 'webDevelopment', area: 'interfaces' },
   { id: 'ddd', area: 'engineering' },
-  { id: 'ragFineTuning', area: 'data' },
+  { id: 'rag', area: 'data' },
+  { id: 'fineTuning', area: 'data' },
   { id: 'promptEngineering', area: 'data' },
 ]
