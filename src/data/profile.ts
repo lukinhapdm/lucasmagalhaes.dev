@@ -16,16 +16,16 @@ export const profile: Profile = {
       handle: '@lukinhapdm',
     },
     {
-      id: 'linkedin',
-      label: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/lucas-magalh%C3%A3es-179856b2',
-      handle: 'in/lucas-magalhães',
-    },
-    {
       id: 'huggingface',
       label: 'Hugging Face',
       url: 'https://huggingface.co/lukinhapdm',
       handle: '@lukinhapdm',
+    },
+    {
+      id: 'linkedin',
+      label: 'LinkedIn',
+      url: 'https://www.linkedin.com/in/lucas-magalh%C3%A3es-179856b2',
+      handle: 'in/lucas-magalhães',
     },
   ],
   stats: [
