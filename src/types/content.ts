@@ -132,3 +132,19 @@ export interface Award {
   id: string
   year?: number
 }
+
+export type KnowledgeAreaId = 'fundamentals' | 'backend' | 'interfaces' | 'engineering' | 'data'
+
+export interface KnowledgeArea {
+  /** Textos em `knowledge.areas.<id>` (título e resumo). */
+  id: KnowledgeAreaId
+  /** Disciplinas: chaves de `knowledge.courses.<key>`. */
+  courses: string[]
+}
+
+export interface SelfStudy {
+  /** Textos em `knowledge.selfStudy.<id>` (título, área e descrição). */
+  id: string
+  /** Conceitos estudados: chaves de `knowledge.selfStudy.<id>.topics.<key>`. */
+  topics: string[]
+}

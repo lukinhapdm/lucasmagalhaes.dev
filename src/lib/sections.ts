@@ -6,6 +6,7 @@ export const SECTIONS = [
   'experience',
   'projects',
   'skills',
+  'knowledge',
   'education',
   'contact',
 ] as const
@@ -18,6 +19,7 @@ export const NAV_ITEMS = [
   'experience',
   'projects',
   'skills',
+  'knowledge',
   'education',
   'contact',
 ] as const

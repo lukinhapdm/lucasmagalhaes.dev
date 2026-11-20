@@ -3,6 +3,7 @@ import { Contact } from '@/sections/Contact'
 import { Education } from '@/sections/Education'
 import { Experience } from '@/sections/Experience'
 import { Hero } from '@/sections/Hero'
+import { Knowledge } from '@/sections/Knowledge'
 import { Projects } from '@/sections/Projects'
 import { Skills } from '@/sections/Skills'
 
@@ -14,6 +15,7 @@ export function HomePage() {
       <Experience />
       <Projects />
       <Skills />
+      <Knowledge />
       <Education />
       <Contact />
     </>

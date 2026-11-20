@@ -21,6 +21,7 @@
     "experience": "Experience",
     "projects": "Projects",
     "skills": "Skills",
+    "knowledge": "Knowledge",
     "education": "Education",
     "contact": "Contact"
   },
@@ -170,6 +171,77 @@
       "devops": "DevOps & Infra",
       "analytics": "Analytics",
       "soft": "Soft skills"
+    }
+  },
+  "knowledge": {
+    "eyebrow": "knowledge",
+    "title": "The foundation behind the code.",
+    "subtitle": "Courses from my Computer Engineering degree (UNIFEI) that underpin my work as a full stack developer, plus the topics I study on my own.",
+    "coursesLabel": "Courses",
+    "hours": "4,000+ hours of Computer Engineering training",
+    "areas": {
+      "fundamentals": {
+        "title": "Programming fundamentals",
+        "summary": "Logic, data structures and algorithm analysis to write correct, efficient code in any language."
+      },
+      "backend": {
+        "title": "Back-end, systems and networks",
+        "summary": "Database modeling, concurrency, distributed systems and networking — the foundation of APIs and servers."
+      },
+      "interfaces": {
+        "title": "Interfaces and experience",
+        "summary": "Usability, mobile development and computer graphics applied to building interfaces."
+      },
+      "engineering": {
+        "title": "Software engineering and management",
+        "summary": "Development processes, requirements and project management to ship software as a team."
+      },
+      "data": {
+        "title": "Data and artificial intelligence",
+        "summary": "AI, statistics and numerical methods — the path that led to my thesis on LLMs applied to healthcare."
+      }
+    },
+    "courses": {
+      "logic": "Programming Logic",
+      "dataStructures": "Algorithms and Data Structures I & II",
+      "algorithmAnalysis": "Algorithm Design and Analysis",
+      "languages": "Programming Languages",
+      "compilers": "Compilers",
+      "theory": "Theory of Computation",
+      "discrete": "Discrete Mathematics",
+      "databases": "Databases",
+      "operatingSystems": "Operating Systems",
+      "distributed": "Parallel and Distributed Systems",
+      "networks": "Computer Networks",
+      "architecture": "Computer Architecture",
+      "hci": "Human-Computer Interaction",
+      "mobile": "Mobile Programming",
+      "graphics": "Computer Graphics and Image Processing",
+      "softwareEngineering": "Software Engineering",
+      "projectManagement": "Project Management",
+      "administration": "Business Administration",
+      "methodology": "Scientific Methodology",
+      "ai": "Artificial Intelligence",
+      "statistics": "Statistics",
+      "numerical": "Numerical Methods",
+      "operationsResearch": "Operations Research"
+    },
+    "selfStudy": {
+      "badge": "Self-study",
+      "ddd": {
+        "title": "Domain-Driven Design (DDD)",
+        "area": "Software engineering",
+        "description": "Self-directed study on modeling software around the business domain: a shared language with the people who know the problem and clear boundaries between the parts of the system.",
+        "topics": {
+          "ubiquitousLanguage": "Ubiquitous language",
+          "boundedContexts": "Bounded contexts",
+          "entities": "Entities",
+          "valueObjects": "Value objects",
+          "aggregates": "Aggregates",
+          "repositories": "Repositories",
+          "domainEvents": "Domain events"
+        }
+      }
     }
   },
   "terms": {

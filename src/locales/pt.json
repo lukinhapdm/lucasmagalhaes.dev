@@ -21,6 +21,7 @@
     "experience": "Experiência",
     "projects": "Projetos",
     "skills": "Skills",
+    "knowledge": "Conhecimentos",
     "education": "Formação",
     "contact": "Contato"
   },
@@ -170,6 +171,77 @@
       "devops": "DevOps & Infra",
       "analytics": "Analytics",
       "soft": "Soft skills"
+    }
+  },
+  "knowledge": {
+    "eyebrow": "conhecimentos",
+    "title": "A base por trás do código.",
+    "subtitle": "Disciplinas da graduação em Engenharia de Computação (UNIFEI) que sustentam meu trabalho como desenvolvedor full stack, somadas aos estudos que faço por conta própria.",
+    "coursesLabel": "Disciplinas",
+    "hours": "4.000+ horas de formação em Engenharia de Computação",
+    "areas": {
+      "fundamentals": {
+        "title": "Fundamentos de programação",
+        "summary": "Lógica, estruturas de dados e análise de algoritmos para escrever código correto e eficiente em qualquer linguagem."
+      },
+      "backend": {
+        "title": "Back-end, sistemas e redes",
+        "summary": "Modelagem de bancos de dados, concorrência, sistemas distribuídos e redes — a base de APIs e servidores."
+      },
+      "interfaces": {
+        "title": "Interfaces e experiência",
+        "summary": "Usabilidade, desenvolvimento mobile e computação gráfica aplicados à construção de interfaces."
+      },
+      "engineering": {
+        "title": "Engenharia de software e gestão",
+        "summary": "Processos de desenvolvimento, requisitos e gestão de projetos para entregar software em equipe."
+      },
+      "data": {
+        "title": "Dados e inteligência artificial",
+        "summary": "IA, estatística e métodos numéricos — o caminho que levou ao TCC com LLM aplicado à saúde."
+      }
+    },
+    "courses": {
+      "logic": "Lógica de Programação",
+      "dataStructures": "Algoritmos e Estruturas de Dados I e II",
+      "algorithmAnalysis": "Projeto e Análise de Algoritmos",
+      "languages": "Linguagens de Programação",
+      "compilers": "Compiladores",
+      "theory": "Teoria da Computação",
+      "discrete": "Matemática Discreta",
+      "databases": "Banco de Dados",
+      "operatingSystems": "Sistemas Operacionais",
+      "distributed": "Sistemas Paralelos e Distribuídos",
+      "networks": "Redes de Computadores",
+      "architecture": "Arquitetura de Computadores",
+      "hci": "Interface Homem-Computador",
+      "mobile": "Programação para Dispositivos Móveis",
+      "graphics": "Computação Gráfica e Processamento de Imagens",
+      "softwareEngineering": "Engenharia de Software",
+      "projectManagement": "Gestão de Projetos",
+      "administration": "Administração",
+      "methodology": "Metodologia Científica",
+      "ai": "Inteligência Artificial",
+      "statistics": "Estatística",
+      "numerical": "Cálculo Numérico",
+      "operationsResearch": "Pesquisa Operacional"
+    },
+    "selfStudy": {
+      "badge": "Estudo independente",
+      "ddd": {
+        "title": "Domain-Driven Design (DDD)",
+        "area": "Engenharia de software",
+        "description": "Estudo por conta própria sobre como modelar o software a partir do domínio do negócio: uma linguagem compartilhada com quem conhece o problema e fronteiras claras entre as partes do sistema.",
+        "topics": {
+          "ubiquitousLanguage": "Linguagem ubíqua",
+          "boundedContexts": "Bounded contexts",
+          "entities": "Entidades",
+          "valueObjects": "Value objects",
+          "aggregates": "Agregados",
+          "repositories": "Repositórios",
+          "domainEvents": "Eventos de domínio"
+        }
+      }
     }
   },
   "terms": {
