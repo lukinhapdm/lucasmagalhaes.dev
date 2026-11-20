@@ -32,7 +32,7 @@ export const projects: Project[] = [
     icon: 'newspaper',
     tags: ['Node.js', 'Express', 'MongoDB', 'Passport', 'Handlebars'],
     status: 'done',
-    repo: 'https://github.com/lukinhapdm/Curso-NodeJs/tree/master/ProjetoBlog',
+    repo: 'https://github.com/lukinhapdm/nodejs-learning/tree/main/ProjetoBlog',
     gallery: [
       { src: '/projects/nodeblog/home.webp', key: 'home', address: 'localhost:8081/' },
       {
@@ -72,5 +72,11 @@ export const labProjects: LabProject[] = [
     name: 'rest-api-learning',
     language: 'HTML',
     repo: 'https://github.com/lukinhapdm/rest-api-learning',
+  },
+  {
+    id: 'nodejs-learning',
+    name: 'nodejs-learning',
+    language: 'JavaScript',
+    repo: 'https://github.com/lukinhapdm/nodejs-learning',
   },
 ]

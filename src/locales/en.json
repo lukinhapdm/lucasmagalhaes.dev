@@ -142,7 +142,8 @@
       "subtitle": "Studies, courses and experiments.",
       "items": {
         "go-learning": "Going through the official Go language tour. Code examples and exercises.",
-        "rest-api-learning": "Going through REST API consumption using JSONPlaceholder. Code examples."
+        "rest-api-learning": "Going through REST API consumption using JSONPlaceholder. Code examples.",
+        "nodejs-learning": "Exercises and projects from Victor Lima's Node.js course: Express, Handlebars, MySQL with Sequelize and MongoDB with Mongoose."
       }
     },
     "teaser": {
