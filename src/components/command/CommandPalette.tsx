@@ -45,7 +45,7 @@ function openExternal(url: string) {
 }
 
 function Palette({ onClose }: { onClose: () => void }) {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const { theme, toggleTheme } = useTheme()
   const copyEmail = useCopyEmail()
   const [query, setQuery] = useState('')
@@ -107,7 +107,7 @@ function Palette({ onClose }: { onClose: () => void }) {
         icon: Download,
         perform: () => {
           const a = document.createElement('a')
-          a.href = profile.cvUrl
+          a.href = profile.cvUrl[i18n.language === 'en' ? 'en' : 'pt']
           a.download = ''
           a.click()
         },
@@ -135,7 +135,7 @@ function Palette({ onClose }: { onClose: () => void }) {
           ]
         : []),
     ]
-  }, [t, theme, toggleTheme, copyEmail])
+  }, [t, i18n.language, theme, toggleTheme, copyEmail])
 
   const filtered = useMemo(() => {
     const q = normalize(query.trim())

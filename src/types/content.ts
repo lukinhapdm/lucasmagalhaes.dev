@@ -29,7 +29,8 @@ export interface Profile {
   email: string
   location: string
   siteUrl: string
-  cvUrl: string
+  /** Currículo em PDF por idioma (gerados por `npm run cv`). */
+  cvUrl: { pt: string; en: string }
   socials: Social[]
   stats: Stat[]
   terminal: TerminalBlock[]

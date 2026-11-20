@@ -7,7 +7,7 @@ export const profile: Profile = {
   email: 'lucaspintodemagalhaes@hotmail.com',
   location: 'São José dos Campos, SP — Brasil',
   siteUrl: 'https://lucasmagalhaes-dev.vercel.app',
-  cvUrl: '/cv-lucas-magalhaes.pdf',
+  cvUrl: { pt: '/cv-lucas-magalhaes.pdf', en: '/cv-lucas-magalhaes-en.pdf' },
   socials: [
     {
       id: 'github',

@@ -17,7 +17,7 @@ import { scrollToSection } from '@/lib/sections'
 const socialIcons = { github: GithubIcon, linkedin: LinkedinIcon } as const
 
 export function Hero() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const reduce = useReducedMotion()
   const fancy = useFancyPointer()
   const roles = t('hero.roles', { returnObjects: true }) as string[]
@@ -95,7 +95,12 @@ export function Hero() {
               {t('hero.ctaProjects')}
               <ArrowRight aria-hidden className="size-4" />
             </ButtonLink>
-            <ButtonLink href={profile.cvUrl} download variant="secondary" magnetic>
+            <ButtonLink
+              href={profile.cvUrl[i18n.language === 'en' ? 'en' : 'pt']}
+              download
+              variant="secondary"
+              magnetic
+            >
               <Download aria-hidden className="size-4" />
               {t('hero.ctaCv')}
             </ButtonLink>
