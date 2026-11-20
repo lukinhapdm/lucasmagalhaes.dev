@@ -28,14 +28,15 @@ Editing content never requires touching components. Everything lives in two plac
 
 Each item in `src/data` has an `id`; its text lives in the locale files under the same key.
 
-| File                | Content                                                                 | Text in                                          |
-| ------------------- | ----------------------------------------------------------------------- | ------------------------------------------------ |
-| `profile.ts`        | name, email, socials, CV URL, "About" stats, Hero terminal lines        | `hero.*`, `about.*`                              |
-| `experience.ts`     | companies, periods (`"YYYY-MM"`, `end: null` = current), location, tags | `experience.items.<id>`                          |
-| `projects.ts`       | projects (status `done` / `wip` / `ongoing`, repo, icon) and Lab cards  | `projects.items.<id>`, `projects.lab.items.<id>` |
-| `skills.ts`         | skill groups and chips                                                  | `skills.groups.<id>`                             |
-| `education.ts`      | academic background                                                     | `education.degrees.<id>`                         |
-| `certifications.ts` | certifications, languages and awards                                    | `education.certs/languages/awards.<id>`          |
+| File                | Content                                                                                   | Text in                                          |
+| ------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------ |
+| `profile.ts`        | name, email, socials, CV URL, "About" stats, Hero terminal lines                          | `hero.*`, `about.*`                              |
+| `experience.ts`     | companies, periods (`"YYYY-MM"`, `end: null` = current), location, tags                   | `experience.items.<id>`                          |
+| `projects.ts`       | projects (status `done` / `wip` / `ongoing`, repo, icon) and Lab cards                    | `projects.items.<id>`, `projects.lab.items.<id>` |
+| `skills.ts`         | skill groups and chips                                                                    | `skills.groups.<id>`                             |
+| `education.ts`      | academic background                                                                       | `education.degrees.<id>`                         |
+| `knowledge.ts`      | degree courses grouped by area and self-study topics (e.g. DDD) for the Knowledge section | `knowledge.*`                                    |
+| `certifications.ts` | certifications, languages and awards                                                      | `education.certs/languages/awards.<id>`          |
 
 **Translatable tags/chips:** items starting with a lowercase letter (e.g. `servers`, `leadership`) are keys under `terms.<item>` in the locale files. Technology names (`React`, `Docker`) are shown as-is.
 
@@ -81,7 +82,7 @@ src/
 ├─ lib/            i18n, router (History API), sections (anchor scrolling), motion, cn, console easter egg
 ├─ locales/        pt.json, en.json
 ├─ pages/          HomePage (/), ProjectsPage (/projects, lazy-loaded)
-├─ sections/       Home sections: Hero, About, Experience, Projects (preview), Skills, Education, Contact
+├─ sections/       Home sections: Hero, About, Experience, Projects (preview), Skills, Knowledge, Education, Contact
 ├─ styles/         Design tokens (CSS vars) + Tailwind
 └─ types/          Content types
 ```
