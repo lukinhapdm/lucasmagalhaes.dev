@@ -53,7 +53,7 @@ and in `pt.json` / `en.json`, inside `experience.items`:
 "acme": { "role": "Software Engineer", "summary": "…", "highlights": ["…", "…"] }
 ```
 
-**New project** — add it to `projects` (`src/data/projects.ts`) and its text to `projects.items.<id>`. The bento layout follows the array order: the first item is the large card.
+**New project** — add it to `projects` (`src/data/projects.ts`) and its text to `projects.items.<id>`. It shows up on the `/projects` page; the bento layout follows the array order (the first item is the large card). The home page shows a preview of the `featured` project plus a link to `/projects`.
 
 **Go Application repository link** — fill in `repo` on the `goapp` item in `projects.ts`.
 
@@ -73,13 +73,15 @@ src/
 │  ├─ command/     Command palette (⌘K / Ctrl+K), loaded on demand
 │  ├─ icons/       Brand icons (GitHub, LinkedIn)
 │  ├─ layout/      Header, Footer, Background, ScrollProgress
+│  ├─ projects/    Project cards, bento grid and Lab grid
 │  ├─ providers/   Theme and toast
 │  └─ ui/          Card, Button, Chip, Reveal, Section, Terminal, Counter…
 ├─ data/           Typed content
 ├─ hooks/          useTheme, useToast, useActiveSection, useTypewriter…
-├─ lib/            i18n, motion, sections (anchor scrolling), cn, console easter egg
+├─ lib/            i18n, router (History API), sections (anchor scrolling), motion, cn, console easter egg
 ├─ locales/        pt.json, en.json
-├─ sections/       Hero, About, Experience, Projects, Skills, Education, Contact
+├─ pages/          HomePage (/), ProjectsPage (/projects, lazy-loaded)
+├─ sections/       Home sections: Hero, About, Experience, Projects (preview), Skills, Education, Contact
 ├─ styles/         Design tokens (CSS vars) + Tailwind
 └─ types/          Content types
 ```
@@ -94,4 +96,4 @@ Theme (dark by default) and language (PT by default) are saved in `localStorage`
 2. Vercel detects **Vite** automatically (build `npm run build`, output `dist`). No environment variables are needed.
 3. Name the project `lucasmagalhaes-dev` so it is served at `lucasmagalhaes-dev.vercel.app`.
 
-`vercel.json` already includes the SPA rewrite and long-term caching for `/assets`. Every push to `main` triggers a production deploy; other branches get preview deployments.
+`vercel.json` already includes the SPA rewrite (so `/projects` works on direct access) and long-term caching for `/assets`. Every push to `main` triggers a production deploy; other branches get preview deployments.
