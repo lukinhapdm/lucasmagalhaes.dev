@@ -90,7 +90,7 @@ const cv = {
       ['Dados', 'PostgreSQL, MongoDB, SQL, Power BI'],
       ['IA', 'LLM, RAG, fine-tuning, prompt engineering, chatbots'],
       ['DevOps', 'Docker, Git, GitHub, Vercel, Google Tag Manager'],
-      ['Outros', 'Domain-Driven Design, Photoshop, Pacote Office'],
+      ['Outros', 'Photoshop, Pacote Office'],
     ],
     education: [
       {
@@ -185,7 +185,7 @@ const cv = {
       ['Data', 'PostgreSQL, MongoDB, SQL, Power BI'],
       ['AI', 'LLM, RAG, fine-tuning, prompt engineering, chatbots'],
       ['DevOps', 'Docker, Git, GitHub, Vercel, Google Tag Manager'],
-      ['Other', 'Domain-Driven Design, Photoshop, Microsoft Office'],
+      ['Other', 'Photoshop, Microsoft Office'],
     ],
     education: [
       {
