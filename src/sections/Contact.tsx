@@ -1,7 +1,7 @@
 import { m } from 'framer-motion'
 import { ArrowUpRight, Copy, Mail, MapPin } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
-import { GithubIcon, LinkedinIcon } from '@/components/icons/BrandIcons'
+import { socialIcons } from '@/components/icons/socialIcons'
 import { ButtonLink, buttonBase } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
 import { ExternalLink } from '@/components/ui/ExternalLink'
@@ -11,8 +11,6 @@ import { fadeUp } from '@/lib/motion'
 import { profile } from '@/data/profile'
 import { useCopyEmail } from '@/hooks/useCopyEmail'
 import { cn } from '@/lib/cn'
-
-const socialIcons = { github: GithubIcon, linkedin: LinkedinIcon } as const
 
 export function Contact() {
   const { t } = useTranslation()
@@ -52,7 +50,8 @@ export function Contact() {
 
         <div className="grid gap-4">
           {profile.socials.map((s) => {
-            const Icon = socialIcons[s.id as keyof typeof socialIcons]
+            const Icon = socialIcons[s.id]
+            if (!Icon) return null
             return (
               <m.div key={s.id} variants={fadeUp}>
                 <Card tilt={5} className="group/social p-5">

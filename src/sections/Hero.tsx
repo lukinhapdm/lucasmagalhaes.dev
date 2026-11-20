@@ -2,7 +2,7 @@ import { m, useMotionValue, useReducedMotion, useSpring } from 'framer-motion'
 import { ArrowDown, ArrowRight, Download, MapPin } from 'lucide-react'
 import { useRef, type PointerEvent } from 'react'
 import { useTranslation } from 'react-i18next'
-import { GithubIcon, LinkedinIcon } from '@/components/icons/BrandIcons'
+import { socialIcons } from '@/components/icons/socialIcons'
 import { ButtonLink } from '@/components/ui/Button'
 import { ExternalLink } from '@/components/ui/ExternalLink'
 import { RevealGroup } from '@/components/ui/Reveal'
@@ -13,8 +13,6 @@ import { useFancyPointer } from '@/hooks/useMediaQuery'
 import { useTypewriter } from '@/hooks/useTypewriter'
 import { ROUTES, linkHandler } from '@/lib/router'
 import { scrollToSection } from '@/lib/sections'
-
-const socialIcons = { github: GithubIcon, linkedin: LinkedinIcon } as const
 
 export function Hero() {
   const { t, i18n } = useTranslation()
@@ -106,7 +104,8 @@ export function Hero() {
             </ButtonLink>
             <div className="ml-1 flex items-center gap-1">
               {profile.socials.map((s) => {
-                const Icon = socialIcons[s.id as keyof typeof socialIcons]
+                const Icon = socialIcons[s.id]
+                if (!Icon) return null
                 return (
                   <ExternalLink
                     key={s.id}

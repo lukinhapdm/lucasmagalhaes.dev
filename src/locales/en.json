@@ -311,11 +311,10 @@
     "toggleLang": "Switch language to Português",
     "copyEmail": "Copy email",
     "downloadCv": "Download CV",
-    "openGithub": "Open GitHub",
-    "openLinkedin": "Open LinkedIn",
     "hintNavigate": "navigate",
     "hintSelect": "select",
-    "hintClose": "close"
+    "hintClose": "close",
+    "open": "Open {{name}}"
   },
   "toast": {
     "emailCopied": "Email copied to clipboard!",
@@ -324,5 +323,10 @@
   "footer": {
     "built": "Built with React, TypeScript & Tailwind.",
     "tip": "Tip: press"
+  },
+  "langHint": {
+    "text": "Também disponível em português",
+    "action": "Clique para trocar o idioma",
+    "lang": "pt-BR"
   }
 }

@@ -8,11 +8,18 @@ import {
   Moon,
   Search,
   Sun,
-  type LucideIcon,
 } from 'lucide-react'
-import { useEffect, useId, useMemo, useRef, useState, type KeyboardEvent } from 'react'
+import {
+  useEffect,
+  useId,
+  useMemo,
+  useRef,
+  useState,
+  type ComponentType,
+  type KeyboardEvent,
+} from 'react'
 import { useTranslation } from 'react-i18next'
-import { GithubIcon, LinkedinIcon } from '@/components/icons/BrandIcons'
+import { socialIcons } from '@/components/icons/socialIcons'
 import { profile } from '@/data/profile'
 import { useCopyEmail } from '@/hooks/useCopyEmail'
 import { useTheme } from '@/hooks/useTheme'
@@ -27,7 +34,7 @@ interface Command {
   id: string
   group: Group
   label: string
-  icon: LucideIcon | typeof GithubIcon
+  icon: ComponentType<{ className?: string }>
   /** Se `true`, o foco não volta ao elemento anterior (ex.: navegação). */
   movesFocus?: boolean
   perform: () => void
@@ -68,8 +75,6 @@ function Palette({ onClose }: { onClose: () => void }) {
   }, [])
 
   const commands = useMemo<Command[]>(() => {
-    const github = profile.socials.find((s) => s.id === 'github')
-    const linkedin = profile.socials.find((s) => s.id === 'linkedin')
     return [
       ...SECTIONS.map<Command>((id) => ({
         id: `go-${id}`,
@@ -112,28 +117,20 @@ function Palette({ onClose }: { onClose: () => void }) {
           a.click()
         },
       },
-      ...(github
-        ? [
-            {
-              id: 'github',
-              group: 'links' as const,
-              label: t('palette.openGithub'),
-              icon: GithubIcon,
-              perform: () => openExternal(github.url),
-            },
-          ]
-        : []),
-      ...(linkedin
-        ? [
-            {
-              id: 'linkedin',
-              group: 'links' as const,
-              label: t('palette.openLinkedin'),
-              icon: LinkedinIcon,
-              perform: () => openExternal(linkedin.url),
-            },
-          ]
-        : []),
+      ...profile.socials.flatMap<Command>((social) => {
+        const Icon = socialIcons[social.id]
+        return Icon
+          ? [
+              {
+                id: social.id,
+                group: 'links',
+                label: t('palette.open', { name: social.label }),
+                icon: Icon,
+                perform: () => openExternal(social.url),
+              },
+            ]
+          : []
+      }),
     ]
   }, [t, i18n.language, theme, toggleTheme, copyEmail])
 

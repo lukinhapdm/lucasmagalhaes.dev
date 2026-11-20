@@ -1,7 +1,7 @@
 /** Mês no formato "AAAA-MM". */
 export type YearMonth = `${number}-${number}`
 
-export type SocialId = 'github' | 'linkedin' | 'email'
+export type SocialId = 'github' | 'linkedin' | 'huggingface' | 'email'
 
 export interface Social {
   id: SocialId

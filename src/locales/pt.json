@@ -311,11 +311,10 @@
     "toggleLang": "Mudar idioma para English",
     "copyEmail": "Copiar e-mail",
     "downloadCv": "Baixar CV",
-    "openGithub": "Abrir GitHub",
-    "openLinkedin": "Abrir LinkedIn",
     "hintNavigate": "navegar",
     "hintSelect": "selecionar",
-    "hintClose": "fechar"
+    "hintClose": "fechar",
+    "open": "Abrir {{name}}"
   },
   "toast": {
     "emailCopied": "E-mail copiado para a área de transferência!",
@@ -324,5 +323,10 @@
   "footer": {
     "built": "Feito com React, TypeScript & Tailwind.",
     "tip": "Dica: pressione"
+  },
+  "langHint": {
+    "text": "Also available in English",
+    "action": "Click to switch the language",
+    "lang": "en"
   }
 }

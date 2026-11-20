@@ -17,3 +17,26 @@ export function LinkedinIcon(props: IconProps) {
     </svg>
   )
 }
+
+/** Ícone simplificado do Hugging Face (rosto sorridente). */
+export function HuggingFaceIcon(props: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.8}
+      aria-hidden
+      {...props}
+    >
+      <circle cx="12" cy="11.5" r="8.5" />
+      <circle cx="9" cy="9.8" r="1.1" fill="currentColor" stroke="none" />
+      <circle cx="15" cy="9.8" r="1.1" fill="currentColor" stroke="none" />
+      <path d="M8.3 13.4c.9 1.6 2.2 2.4 3.7 2.4s2.8-.8 3.7-2.4" strokeLinecap="round" />
+      <path
+        d="M3.6 16.5c-.9.9-1.2 2.3-.2 3.2.9.8 2.1.5 3-.3M20.4 16.5c.9.9 1.2 2.3.2 3.2-.9.8-2.1.5-3-.3"
+        strokeLinecap="round"
+      />
+    </svg>
+  )
+}
