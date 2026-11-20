@@ -230,16 +230,20 @@
       "badge": "Self-study",
       "ddd": {
         "title": "Domain-Driven Design (DDD)",
-        "area": "Software engineering",
-        "description": "Self-directed study on modeling software around the business domain: a shared language with the people who know the problem and clear boundaries between the parts of the system.",
+        "summary": "On my own: modeling software around the business domain, with a shared language and clear boundaries.",
         "topics": {
           "ubiquitousLanguage": "Ubiquitous language",
           "boundedContexts": "Bounded contexts",
-          "entities": "Entities",
-          "valueObjects": "Value objects",
           "aggregates": "Aggregates",
-          "repositories": "Repositories",
           "domainEvents": "Domain events"
+        }
+      },
+      "llm": {
+        "title": "RAG and LLM fine-tuning",
+        "summary": "On my own: how to adapt language models — retrieving context from external sources (RAG) or specializing the model itself (fine-tuning).",
+        "topics": {
+          "rag": "RAG",
+          "fineTuning": "Fine-tuning"
         }
       }
     },

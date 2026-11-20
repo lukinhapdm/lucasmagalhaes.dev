@@ -29,18 +29,12 @@ export const knowledgeAreas: KnowledgeArea[] = [
   { id: 'data', courses: ['ai', 'statistics', 'numerical', 'operationsResearch'] },
 ]
 
-/** Estudos feitos por conta própria, fora da grade da graduação. */
+/** Estudos feitos por conta própria, exibidos em destaque dentro do card da área. */
 export const selfStudies: SelfStudy[] = [
   {
     id: 'ddd',
-    topics: [
-      'ubiquitousLanguage',
-      'boundedContexts',
-      'entities',
-      'valueObjects',
-      'aggregates',
-      'repositories',
-      'domainEvents',
-    ],
+    area: 'engineering',
+    topics: ['ubiquitousLanguage', 'boundedContexts', 'aggregates', 'domainEvents'],
   },
+  { id: 'llm', area: 'data', topics: ['rag', 'fineTuning'] },
 ]

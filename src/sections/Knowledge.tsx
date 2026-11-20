@@ -2,9 +2,9 @@ import {
   BrainCircuit,
   Code2,
   GraduationCap,
-  Layers,
   MonitorSmartphone,
   ServerCog,
+  Sparkles,
   Workflow,
   type LucideIcon,
 } from 'lucide-react'
@@ -14,7 +14,7 @@ import { Carousel } from '@/components/ui/Carousel'
 import { Reveal } from '@/components/ui/Reveal'
 import { Section } from '@/components/ui/Section'
 import { knowledgeAreas, selfStudies } from '@/data/knowledge'
-import type { KnowledgeAreaId } from '@/types/content'
+import type { KnowledgeAreaId, SelfStudy } from '@/types/content'
 
 const areaIcons: Record<KnowledgeAreaId, LucideIcon> = {
   fundamentals: Code2,
@@ -24,7 +24,37 @@ const areaIcons: Record<KnowledgeAreaId, LucideIcon> = {
   data: BrainCircuit,
 }
 
-/** Conhecimentos da graduação (por área) + estudos independentes. */
+/** Bloco compacto, em destaque, para um estudo feito por conta própria. */
+function SelfStudyNote({ study }: { study: SelfStudy }) {
+  const { t } = useTranslation()
+  const key = `knowledge.selfStudy.${study.id}`
+  return (
+    <div className="relative mt-5 overflow-hidden rounded-xl border border-accent/40 bg-surface-2/50 p-4">
+      <div
+        aria-hidden
+        className="absolute -top-10 -right-10 size-28 rounded-full bg-gradient-accent opacity-15 blur-2xl"
+      />
+      <p className="inline-flex items-center gap-1.5 font-mono text-[11px] text-accent">
+        <Sparkles aria-hidden className="size-3.5" />
+        {t('knowledge.selfStudy.badge')}
+      </p>
+      <h4 className="mt-1.5 text-sm font-semibold tracking-tight">{t(`${key}.title`)}</h4>
+      <p className="mt-1 text-xs leading-relaxed text-muted">{t(`${key}.summary`)}</p>
+      <ul className="mt-3 flex flex-wrap gap-1.5">
+        {study.topics.map((topic) => (
+          <li
+            key={topic}
+            className="rounded-md border border-border bg-surface/80 px-2 py-0.5 font-mono text-[10.5px] text-fg/90"
+          >
+            {t(`${key}.topics.${topic}`)}
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+/** Conhecimentos da graduação (por área), com estudos independentes em destaque. */
 export function Knowledge() {
   const { t } = useTranslation()
 
@@ -45,6 +75,7 @@ export function Knowledge() {
         >
           {knowledgeAreas.map((area) => {
             const Icon = areaIcons[area.id]
+            const studies = selfStudies.filter((s) => s.area === area.id)
             return (
               <div key={area.id} className="h-full">
                 <Card tilt={3} className="flex h-full flex-col p-6">
@@ -68,48 +99,9 @@ export function Knowledge() {
                       </li>
                     ))}
                   </ul>
-                </Card>
-              </div>
-            )
-          })}
-
-          {selfStudies.map((study) => {
-            const key = `knowledge.selfStudy.${study.id}`
-            return (
-              <div key={study.id} className="h-full">
-                <Card
-                  tilt={3}
-                  className="relative flex h-full flex-col overflow-hidden border-accent/40 p-6"
-                >
-                  <div
-                    aria-hidden
-                    className="absolute -top-16 -right-16 size-44 rounded-full bg-gradient-accent opacity-20 blur-3xl"
-                  />
-                  <div className="mb-5 flex items-start justify-between gap-3">
-                    <span className="grid size-10 place-items-center rounded-lg border border-border bg-surface-2 text-accent">
-                      <Layers aria-hidden className="size-5" />
-                    </span>
-                    <span className="rounded-full border border-accent/40 bg-surface-2/60 px-2.5 py-1 font-mono text-[11px] text-accent">
-                      {t('knowledge.selfStudy.badge')}
-                    </span>
-                  </div>
-                  <p className="font-mono text-[11px] tracking-wide text-muted uppercase">
-                    {t(`${key}.area`)}
-                  </p>
-                  <h3 className="mt-1 font-semibold tracking-tight">{t(`${key}.title`)}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted">
-                    {t(`${key}.description`)}
-                  </p>
-                  <ul className="mt-5 flex flex-wrap gap-1.5 border-t border-border pt-4">
-                    {study.topics.map((topic) => (
-                      <li
-                        key={topic}
-                        className="rounded-md border border-border bg-surface-2/60 px-2 py-0.5 font-mono text-[11px] text-fg/90"
-                      >
-                        {t(`${key}.topics.${topic}`)}
-                      </li>
-                    ))}
-                  </ul>
+                  {studies.map((study) => (
+                    <SelfStudyNote key={study.id} study={study} />
+                  ))}
                 </Card>
               </div>
             )

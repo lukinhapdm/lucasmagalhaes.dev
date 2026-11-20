@@ -230,16 +230,20 @@
       "badge": "Estudo independente",
       "ddd": {
         "title": "Domain-Driven Design (DDD)",
-        "area": "Engenharia de software",
-        "description": "Estudo por conta própria sobre como modelar o software a partir do domínio do negócio: uma linguagem compartilhada com quem conhece o problema e fronteiras claras entre as partes do sistema.",
+        "summary": "Por conta própria: modelar o software a partir do domínio do negócio, com linguagem compartilhada e fronteiras claras.",
         "topics": {
           "ubiquitousLanguage": "Linguagem ubíqua",
           "boundedContexts": "Bounded contexts",
-          "entities": "Entidades",
-          "valueObjects": "Value objects",
           "aggregates": "Agregados",
-          "repositories": "Repositórios",
           "domainEvents": "Eventos de domínio"
+        }
+      },
+      "llm": {
+        "title": "RAG e fine-tuning de LLMs",
+        "summary": "Por conta própria: como adaptar modelos de linguagem — buscar contexto em fontes externas (RAG) ou especializar o próprio modelo (fine-tuning).",
+        "topics": {
+          "rag": "RAG",
+          "fineTuning": "Fine-tuning"
         }
       }
     },
