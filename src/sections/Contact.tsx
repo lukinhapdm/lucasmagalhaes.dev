@@ -1,5 +1,5 @@
 import { m } from 'framer-motion'
-import { ArrowUpRight, Copy, Mail, MapPin } from 'lucide-react'
+import { ArrowUpRight, Copy, Mail } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { socialIcons } from '@/components/icons/socialIcons'
 import { ButtonLink, buttonBase } from '@/components/ui/Button'
@@ -12,7 +12,7 @@ import { profile } from '@/data/profile'
 import { useCopyEmail } from '@/hooks/useCopyEmail'
 import { cn } from '@/lib/cn'
 
-/** Contato: e-mail com botão de copiar + cards das redes sociais e localização. */
+/** Contato: e-mail com botão de copiar + cards das redes sociais. */
 export function Contact() {
   const { t } = useTranslation()
   const copyEmail = useCopyEmail()
@@ -80,17 +80,6 @@ export function Contact() {
               </m.div>
             )
           })}
-          <m.div variants={fadeUp}>
-            <Card tilt={0} className="flex items-center gap-4 p-5">
-              <span className="grid size-11 place-items-center rounded-xl border border-border bg-surface-2 text-accent">
-                <MapPin aria-hidden className="size-5" />
-              </span>
-              <div>
-                <p className="font-medium">{t('contact.location')}</p>
-                <p className="font-mono text-xs text-muted">{profile.location}</p>
-              </div>
-            </Card>
-          </m.div>
         </div>
       </RevealGroup>
     </Section>

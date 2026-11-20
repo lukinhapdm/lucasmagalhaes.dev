@@ -295,8 +295,7 @@
     "title": "Vamos construir algo juntos?",
     "description": "Aberto a oportunidades, projetos e boas conversas sobre tecnologia. A forma mais rápida de falar comigo é por e-mail.",
     "copy": "Copiar e-mail",
-    "send": "Enviar e-mail",
-    "location": "Localização"
+    "send": "Enviar e-mail"
   },
   "palette": {
     "placeholder": "Digite um comando ou busque…",
