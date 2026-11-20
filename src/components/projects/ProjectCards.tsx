@@ -48,6 +48,7 @@ const bento = [
   'md:col-span-3',
 ]
 
+/** Selo de status do projeto (concluído, em desenvolvimento, em andamento). */
 export function Status({ status }: { status: ProjectStatus }) {
   const { t } = useTranslation()
   const { tone, pulse } = statusTone[status]
@@ -59,6 +60,7 @@ export function Status({ status }: { status: ProjectStatus }) {
   )
 }
 
+/** Conversa ilustrativa exibida no card do Chatbot RAG. */
 function ChatMock() {
   const { t } = useTranslation()
   return (
@@ -84,6 +86,7 @@ function ChatMock() {
   )
 }
 
+/** Card de projeto: badge opcional, galeria de telas, prévia de sites e links. */
 export function ProjectCard({ project, className }: { project: Project; className?: string }) {
   const { t } = useTranslation()
   const Icon = icons[project.icon]
@@ -203,6 +206,7 @@ export function LabGrid() {
         <m.div key={lab.id} variants={fadeUp}>
           <Card tilt={5} className="group/lab h-full p-5">
             <div className="flex items-center justify-between gap-3">
+              {/* O link estica sobre o card inteiro com um pseudo-elemento (card todo clicável). */}
               <h3 className="font-mono text-sm font-medium text-fg">
                 <ExternalLink
                   href={lab.repo}

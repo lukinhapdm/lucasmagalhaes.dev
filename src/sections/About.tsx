@@ -7,6 +7,7 @@ import { Section } from '@/components/ui/Section'
 import { fadeUp } from '@/lib/motion'
 import { profile } from '@/data/profile'
 
+/** Sobre: parágrafos traduzidos + cards com números animados. */
 export function About() {
   const { t } = useTranslation()
   const paragraphs = t('about.paragraphs', { returnObjects: true }) as string[]

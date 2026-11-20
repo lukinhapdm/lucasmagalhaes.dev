@@ -8,6 +8,7 @@ export const profile: Profile = {
   location: 'São José dos Campos, SP — Brasil',
   siteUrl: 'https://lucasmagalhaes-dev.vercel.app',
   cvUrl: { pt: '/cv-lucas-magalhaes.pdf', en: '/cv-lucas-magalhaes-en.pdf' },
+  // A ordem define a ordem dos ícones no Hero, no Contato e na paleta.
   socials: [
     {
       id: 'github',
@@ -28,12 +29,14 @@ export const profile: Profile = {
       handle: 'in/lucas-magalhães',
     },
   ],
+  // Números animados do "Sobre"; rótulos em about.stats.<id>.
   stats: [
     { id: 'years', value: 2, suffix: '+' },
     { id: 'projects', value: 20, suffix: '+' },
     { id: 'technologies', value: 10, suffix: '+' },
     { id: 'ai', value: 1 },
   ],
+  // Comandos e saídas do terminal animado do Hero (não traduzidos, como num terminal real).
   terminal: [
     { command: 'whoami', output: ['lucas — full stack developer @ gecko digital'] },
     {

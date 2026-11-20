@@ -12,6 +12,7 @@ export function useActiveSection(ids: readonly string[], resetKey?: string): str
           if (entry.isIntersecting) setActive(entry.target.id)
         }
       },
+      // Faixa estreita no meio da tela: só a seção que passa por ali fica ativa.
       { rootMargin: '-45% 0px -50% 0px' },
     )
     ids.forEach((id) => {

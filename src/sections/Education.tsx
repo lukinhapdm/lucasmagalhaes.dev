@@ -9,6 +9,7 @@ import { fadeUp } from '@/lib/motion'
 import { awards, certifications, languages } from '@/data/certifications'
 import { education } from '@/data/education'
 
+/** Card com ícone e título usado nos quatro blocos da seção. */
 function Block({ icon, title, children }: { icon: ReactNode; title: string; children: ReactNode }) {
   return (
     <m.div variants={fadeUp} className="h-full">
@@ -25,6 +26,7 @@ function Block({ icon, title, children }: { icon: ReactNode; title: string; chil
   )
 }
 
+/** Formação, certificações, idiomas (com certificado) e prêmios. */
 export function Education() {
   const { t } = useTranslation()
 

@@ -12,6 +12,7 @@ interface SectionProps {
   heading?: string
 }
 
+/** Seção da home com âncora, numeração ("03 //") e título vindos do i18n. */
 export function Section({ id, children, className, heading }: SectionProps) {
   const { t } = useTranslation()
   const index = SECTIONS.indexOf(id)

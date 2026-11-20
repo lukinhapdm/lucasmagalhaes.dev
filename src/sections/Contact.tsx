@@ -12,6 +12,7 @@ import { profile } from '@/data/profile'
 import { useCopyEmail } from '@/hooks/useCopyEmail'
 import { cn } from '@/lib/cn'
 
+/** Contato: e-mail com botão de copiar + cards das redes sociais e localização. */
 export function Contact() {
   const { t } = useTranslation()
   const copyEmail = useCopyEmail()

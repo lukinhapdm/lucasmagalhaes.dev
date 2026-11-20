@@ -1,5 +1,6 @@
 import { m, useScroll, useSpring } from 'framer-motion'
 
+/** Barra de progresso de leitura no topo da página. */
 export function ScrollProgress() {
   const { scrollYProgress } = useScroll()
   const scaleX = useSpring(scrollYProgress, { stiffness: 180, damping: 30, restDelta: 0.001 })

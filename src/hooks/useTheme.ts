@@ -7,6 +7,7 @@ export interface ThemeContextValue {
   toggleTheme: () => void
 }
 
+/** Contexto separado do Provider para não quebrar o Fast Refresh do Vite. */
 export const ThemeContext = createContext<ThemeContextValue | null>(null)
 
 export function useTheme(): ThemeContextValue {

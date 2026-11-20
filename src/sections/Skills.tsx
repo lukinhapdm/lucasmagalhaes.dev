@@ -28,6 +28,7 @@ const groupIcons: Record<SkillGroupId, LucideIcon> = {
   soft: Users,
 }
 
+/** Skills em grupos; o esmaecimento dos outros grupos no hover é feito em CSS (.skills-grid). */
 export function Skills() {
   const { t } = useTranslation()
 
@@ -40,6 +41,7 @@ export function Skills() {
             <m.div
               key={group.id}
               variants={fadeUp}
+              // O último grupo ocupa a linha inteira para fechar o grid.
               className={`skill-group ${i === skills.length - 1 ? 'sm:col-span-2 lg:col-span-3' : ''}`}
             >
               <Card tilt={4} className="h-full p-6">

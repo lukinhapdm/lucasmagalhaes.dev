@@ -51,6 +51,7 @@ function openExternal(url: string) {
   window.open(url, '_blank', 'noopener,noreferrer')
 }
 
+/** Conteúdo da paleta; montado só enquanto aberta, então o estado reinicia a cada abertura. */
 function Palette({ onClose }: { onClose: () => void }) {
   const { t, i18n } = useTranslation()
   const { theme, toggleTheme } = useTheme()
@@ -63,6 +64,7 @@ function Palette({ onClose }: { onClose: () => void }) {
   const shouldRestore = useRef(true)
   const listId = useId()
 
+  // Ao abrir: guarda o foco anterior, foca o campo e trava a rolagem da página.
   useEffect(() => {
     restoreTo.current = document.activeElement as HTMLElement | null
     inputRef.current?.focus()
@@ -74,6 +76,7 @@ function Palette({ onClose }: { onClose: () => void }) {
     }
   }, [])
 
+  // Lista de comandos: seções, ações e links das redes sociais.
   const commands = useMemo<Command[]>(() => {
     return [
       ...SECTIONS.map<Command>((id) => ({
@@ -141,6 +144,7 @@ function Palette({ onClose }: { onClose: () => void }) {
 
   const current = Math.min(active, Math.max(filtered.length - 1, 0))
 
+  // Fecha antes de executar para a ação (ex.: rolagem) não competir com a animação de saída.
   function run(cmd: Command | undefined) {
     if (!cmd) return
     shouldRestore.current = !cmd.movesFocus
@@ -173,6 +177,7 @@ function Palette({ onClose }: { onClose: () => void }) {
         e.preventDefault()
         onClose()
         break
+      // Mantém o foco no campo (as opções usam aria-activedescendant).
       case 'Tab':
         e.preventDefault()
         break
@@ -283,6 +288,7 @@ function Palette({ onClose }: { onClose: () => void }) {
   )
 }
 
+/** Export default para ser carregada sob demanda com React.lazy (ver App.tsx). */
 export default function CommandPalette({ open, onClose }: Props) {
   return <AnimatePresence>{open && <Palette onClose={onClose} />}</AnimatePresence>
 }

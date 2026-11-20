@@ -1,6 +1,7 @@
 import { cn } from '@/lib/cn'
 
 /** Ponto de status; `pulse` adiciona o anel animado. */
+/** Ponto colorido de status (concluído, em desenvolvimento, atual). */
 export function StatusDot({
   pulse = false,
   tone = 'success',

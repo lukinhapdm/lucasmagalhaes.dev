@@ -30,6 +30,7 @@ export function Terminal({ blocks }: { blocks: TerminalBlock[] }) {
   const [typed, setTyped] = useState(0)
   const done = reduce || shown >= lines.length
 
+  // Máquina de estados: digita o comando letra a letra e depois revela cada linha de saída.
   useEffect(() => {
     if (done) return
     const line = lines[shown]
@@ -68,6 +69,7 @@ export function Terminal({ blocks }: { blocks: TerminalBlock[] }) {
           aria-hidden
           className="overflow-x-auto p-4 font-mono text-[12.5px] leading-6 sm:p-5 sm:text-[13px]"
         >
+          {/* Linhas ainda não reveladas ficam invisíveis (não ocultas) para evitar salto de layout. */}
           {lines.map((line, i) => {
             const visible = done || i < shown || (i === shown && line.kind === 'cmd')
             const isTyping = !done && i === shown

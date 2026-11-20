@@ -16,6 +16,7 @@ const variants: Record<Variant, string> = {
   ghost: 'text-muted hover:text-fg hover:bg-surface-2',
 }
 
+/** Classes base compartilhadas por links e botões com aparência de botão. */
 export const buttonBase =
   'inline-flex items-center justify-center gap-2 rounded-xl px-5 h-11 text-sm transition-[transform,filter,background-color,border-color,color] duration-200 ease-out-expo will-change-transform select-none'
 
@@ -33,6 +34,7 @@ export const ButtonLink = forwardRef<HTMLAnchorElement, ButtonLinkProps>(functio
     else if (forwarded) forwarded.current = node
   }
 
+  // Efeito magnético: o botão acompanha levemente o cursor (só com mouse e sem movimento reduzido).
   function handleMove(e: PointerEvent<HTMLAnchorElement>) {
     if (!magnetic || !fancy || !inner.current) return
     const r = inner.current.getBoundingClientRect()
@@ -58,6 +60,7 @@ export const ButtonLink = forwardRef<HTMLAnchorElement, ButtonLinkProps>(functio
   )
 })
 
+/** Botão quadrado só com ícone (tema, idioma, menu). Exige aria-label ou texto sr-only. */
 export function IconButton({ className, ...props }: React.ButtonHTMLAttributes<HTMLButtonElement>) {
   return (
     <button

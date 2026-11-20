@@ -17,6 +17,7 @@ export function useTypewriter(
   const [deleting, setDeleting] = useState(false)
   const word = words[index % words.length] ?? ''
 
+  // Cada execução avança um passo: digitar, pausar, apagar ou trocar de palavra.
   useEffect(() => {
     if (!enabled) {
       const id = window.setTimeout(() => setIndex((i) => i + 1), pause * 1.5)

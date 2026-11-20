@@ -37,6 +37,7 @@ export function Header({ onOpenPalette, onPreloadPalette, onPreloadProjects }: H
     if (mobileNavRef.current) mobileNavRef.current.inert = !open
   }, [open])
 
+  // Header encolhe e ganha fundo com blur depois de rolar um pouco.
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24)
     onScroll()
@@ -44,6 +45,7 @@ export function Header({ onOpenPalette, onPreloadPalette, onPreloadProjects }: H
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  // Esc fecha o menu mobile.
   useEffect(() => {
     if (!open) return
     const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(false)
@@ -51,6 +53,7 @@ export function Header({ onOpenPalette, onPreloadPalette, onPreloadProjects }: H
     return () => window.removeEventListener('keydown', onKey)
   }, [open])
 
+  // Cliques com Ctrl/⌘/Shift ou botão do meio seguem o comportamento padrão (nova aba).
   function go(id: NavItem | 'hero') {
     return (e: React.MouseEvent<HTMLAnchorElement>) => {
       if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return
@@ -91,6 +94,7 @@ export function Header({ onOpenPalette, onPreloadPalette, onPreloadProjects }: H
             </span>
           </a>
 
+          {/* Menu desktop (a partir de 1024px); no mobile usa o menu hambúrguer. */}
           <nav aria-label={t('a11y.mainNav')} className="hidden lg:block">
             <ul className="flex items-center gap-1">
               {NAV.map((id) => (

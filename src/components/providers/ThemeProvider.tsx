@@ -3,6 +3,7 @@ import { ThemeContext, type Theme } from '@/hooks/useTheme'
 
 const STORAGE_KEY = 'theme'
 
+// O script inline do index.html já aplicou o tema salvo; aqui só lemos o estado inicial.
 function readTheme(): Theme {
   return document.documentElement.classList.contains('light') ? 'light' : 'dark'
 }
@@ -10,6 +11,7 @@ function readTheme(): Theme {
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>(readTheme)
 
+  // Sincroniza a classe do <html>, a cor da barra do navegador e o localStorage.
   useEffect(() => {
     const root = document.documentElement
     root.classList.toggle('light', theme === 'light')

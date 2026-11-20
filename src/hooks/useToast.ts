@@ -4,6 +4,7 @@ export interface ToastContextValue {
   showToast: (message: string) => void
 }
 
+/** Contexto separado do Provider para não quebrar o Fast Refresh do Vite. */
 export const ToastContext = createContext<ToastContextValue | null>(null)
 
 export function useToast(): ToastContextValue {

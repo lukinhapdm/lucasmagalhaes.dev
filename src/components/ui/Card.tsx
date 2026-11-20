@@ -12,6 +12,7 @@ export function Card({ className, tilt = 3, children, ...props }: CardProps) {
   const ref = useRef<HTMLDivElement>(null)
   const fancy = useFancyPointer()
 
+  // Atualiza variáveis CSS lidas por .card (globals.css): posição do spotlight e ângulo do tilt.
   function handleMove(e: PointerEvent<HTMLDivElement>) {
     const el = ref.current
     if (!el || !fancy) return

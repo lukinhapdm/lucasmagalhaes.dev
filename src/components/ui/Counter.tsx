@@ -20,6 +20,7 @@ export function Counter({
     if (!inView || reduce) return
     let raf = 0
     const start = performance.now()
+    // Easing ease-out cúbico: acelera no início e desacelera perto do valor final.
     const tick = (now: number) => {
       const p = Math.min((now - start) / duration, 1)
       setN(Math.round(value * (1 - Math.pow(1 - p, 3))))
@@ -31,6 +32,7 @@ export function Counter({
 
   return (
     <span ref={ref} className="tabular-nums">
+      {/* Leitores de tela leem só o valor final, não a contagem animada. */}
       <span aria-hidden>
         {reduce ? value : n}
         {suffix}

@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { cn } from '@/lib/cn'
 
+/** Etiqueta pequena em fonte mono (tecnologias, tags). */
 export function Chip({ children, className }: { children: ReactNode; className?: string }) {
   return (
     <span

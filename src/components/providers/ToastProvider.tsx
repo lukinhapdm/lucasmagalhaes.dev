@@ -3,6 +3,7 @@ import { CheckCircle2 } from 'lucide-react'
 import { useCallback, useMemo, useRef, useState, type ReactNode } from 'react'
 import { ToastContext } from '@/hooks/useToast'
 
+/** Toast único e global: uma nova mensagem substitui a anterior. */
 export function ToastProvider({ children }: { children: ReactNode }) {
   const [message, setMessage] = useState<{ id: number; text: string } | null>(null)
   const timer = useRef<number | undefined>(undefined)
@@ -18,6 +19,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
   return (
     <ToastContext.Provider value={value}>
       {children}
+      {/* Região aria-live: leitores de tela anunciam a mensagem. */}
       <div
         role="status"
         aria-live="polite"

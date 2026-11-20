@@ -7,6 +7,7 @@ import { Knowledge } from '@/sections/Knowledge'
 import { Projects } from '@/sections/Projects'
 import { Skills } from '@/sections/Skills'
 
+/** Página inicial (/): a ordem aqui define a ordem das seções na tela. */
 export function HomePage() {
   return (
     <>

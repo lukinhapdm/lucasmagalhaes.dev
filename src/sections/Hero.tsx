@@ -27,6 +27,7 @@ export function Hero() {
   const x = useSpring(gx, { stiffness: 40, damping: 20 })
   const y = useSpring(gy, { stiffness: 40, damping: 20 })
 
+  // Glow do fundo segue o cursor com mola (useSpring); desativado no mobile e com movimento reduzido.
   function handleMove(e: PointerEvent<HTMLElement>) {
     const rect = sectionRef.current?.getBoundingClientRect()
     if (!rect) return
@@ -74,6 +75,7 @@ export function Hero() {
           </m.h1>
 
           <m.p variants={fadeUp} className="mt-5 h-8 font-mono text-lg md:text-xl">
+            {/* Leitores de tela leem todos os cargos; o efeito de digitação é só visual. */}
             <span className="sr-only">{roles.join(' · ')}</span>
             <span aria-hidden>
               <span className="text-accent">&gt;</span> <span className="text-fg">{role}</span>

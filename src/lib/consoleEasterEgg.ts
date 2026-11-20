@@ -1,5 +1,6 @@
 import { profile } from '@/data/profile'
 
+/** Imprime o monograma "LM" em ASCII e o link do GitHub no console. */
 export function printConsoleEasterEgg() {
   const github = profile.socials.find((s) => s.id === 'github')?.url ?? ''
   const art = [

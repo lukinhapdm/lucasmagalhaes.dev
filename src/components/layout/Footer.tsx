@@ -4,6 +4,7 @@ import { profile } from '@/data/profile'
 import { modKeyLabel } from '@/lib/platform'
 import { scrollToTop } from '@/lib/sections'
 
+/** Rodapé com créditos, dica do atalho ⌘K e botão de voltar ao topo. */
 export function Footer() {
   const { t } = useTranslation()
   return (
