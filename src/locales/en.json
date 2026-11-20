@@ -100,6 +100,11 @@
         "description": "Retrieval-Augmented Generation chatbot powered by an LLM that answers questions about COVID-19 and health units in Itabira/MG, grounded in official sources.",
         "badge": "Thesis · Computer Engineering"
       },
+      "nodeblog": {
+        "title": "Blog with admin panel",
+        "badge": "Final project · Node.js course",
+        "description": "Node.js blog with a public area (search, categories, posts with reading time and related posts) and an admin panel with CRUD for categories, posts and users. Login with Passport and bcrypt-hashed passwords."
+      },
       "goapp": {
         "title": "Go Application",
         "description": "Go back-end with PostgreSQL and Docker to deepen containerization and data modeling."
@@ -124,8 +129,7 @@
       "subtitle": "Studies, courses and experiments.",
       "items": {
         "go-learning": "Going through the official Go language tour. Code examples and exercises.",
-        "rest-api-learning": "Going through REST API consumption using JSONPlaceholder. Code examples.",
-        "curso-nodejs": "Node.js course with professor Victor Lima (16h) — EAD Education."
+        "rest-api-learning": "Going through REST API consumption using JSONPlaceholder. Code examples."
       }
     },
     "teaser": {

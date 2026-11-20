@@ -1,5 +1,5 @@
 import { m } from 'framer-motion'
-import { ArrowUpRight, Bot, Briefcase, Lock, Server, ShoppingCart } from 'lucide-react'
+import { ArrowUpRight, Bot, Briefcase, Lock, Newspaper, Server, ShoppingCart } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { GithubIcon } from '@/components/icons/BrandIcons'
 import { Card } from '@/components/ui/Card'
@@ -12,7 +12,13 @@ import { labProjects, projects } from '@/data/projects'
 import { cn } from '@/lib/cn'
 import type { Project, ProjectStatus } from '@/types/content'
 
-const icons = { bot: Bot, server: Server, shopping: ShoppingCart, briefcase: Briefcase } as const
+const icons = {
+  bot: Bot,
+  server: Server,
+  shopping: ShoppingCart,
+  briefcase: Briefcase,
+  newspaper: Newspaper,
+} as const
 
 const statusTone: Record<
   ProjectStatus,
@@ -32,7 +38,13 @@ const langColors: Record<string, string> = {
 }
 
 /** Layout do bento: índice → classes de grid. */
-const bento = ['md:col-span-4 md:row-span-2', 'md:col-span-2', 'md:col-span-2', 'md:col-span-6']
+const bento = [
+  'md:col-span-4 md:row-span-2',
+  'md:col-span-2',
+  'md:col-span-2',
+  'md:col-span-3',
+  'md:col-span-3',
+]
 
 export function Status({ status }: { status: ProjectStatus }) {
   const { t } = useTranslation()

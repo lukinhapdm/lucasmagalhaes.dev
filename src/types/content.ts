@@ -63,7 +63,7 @@ export interface Project {
   url?: string
   featured?: boolean
   /** Ícone (nome exportado de lucide-react, ver `components/ui/ProjectIcon`). */
-  icon: 'bot' | 'server' | 'shopping' | 'briefcase'
+  icon: 'bot' | 'server' | 'shopping' | 'briefcase' | 'newspaper'
 }
 
 export interface LabProject {

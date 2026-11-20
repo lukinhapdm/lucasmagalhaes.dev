@@ -100,6 +100,11 @@
         "description": "Chatbot com Retrieval-Augmented Generation e LLM que responde perguntas sobre COVID-19 e unidades de saúde de Itabira/MG, com respostas fundamentadas em fontes oficiais.",
         "badge": "TCC · Engenharia de Computação"
       },
+      "nodeblog": {
+        "title": "Blog com painel administrativo",
+        "badge": "Projeto final · Curso de Node.js",
+        "description": "Blog em Node.js com área pública (busca, categorias, posts com tempo de leitura e relacionados) e painel admin com CRUD de categorias, postagens e usuários. Login com Passport e senhas com hash bcrypt."
+      },
       "goapp": {
         "title": "Aplicação Go",
         "description": "Back-end em Go com PostgreSQL e Docker para aprofundar conteinerização e modelagem de dados."
@@ -124,8 +129,7 @@
       "subtitle": "Estudos, cursos e experimentos.",
       "items": {
         "go-learning": "Percorrendo o tour oficial da linguagem Go, com exemplos e exercícios.",
-        "rest-api-learning": "Consumo de REST API usando JSONPlaceholder, com exemplos de código.",
-        "curso-nodejs": "Curso de Node.js com o professor Victor Lima (16h) — EAD Education."
+        "rest-api-learning": "Consumo de REST API usando JSONPlaceholder, com exemplos de código."
       }
     },
     "teaser": {

@@ -11,6 +11,13 @@ export const projects: Project[] = [
     repo: 'https://github.com/lukinhapdm/rag-llm-chatbot-saude',
   },
   {
+    id: 'nodeblog',
+    icon: 'newspaper',
+    tags: ['Node.js', 'Express', 'MongoDB', 'Passport', 'Handlebars'],
+    status: 'done',
+    repo: 'https://github.com/lukinhapdm/Curso-NodeJs/tree/master/ProjetoBlog',
+  },
+  {
     id: 'goapp',
     icon: 'server',
     tags: ['Go', 'PostgreSQL', 'Docker'],
@@ -45,11 +52,5 @@ export const labProjects: LabProject[] = [
     name: 'rest-api-learning',
     language: 'HTML',
     repo: 'https://github.com/lukinhapdm/rest-api-learning',
-  },
-  {
-    id: 'curso-nodejs',
-    name: 'Curso-NodeJs',
-    language: 'JavaScript',
-    repo: 'https://github.com/lukinhapdm/Curso-NodeJs',
   },
 ]
