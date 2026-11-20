@@ -32,7 +32,7 @@ const cv = {
       summary: 'Resumo',
       experience: 'Experiência profissional',
       academic: 'Experiência durante a formação',
-      projects: 'Projetos',
+      projects: 'Projeto em destaque',
       skills: 'Competências técnicas',
       education: 'Formação acadêmica',
       courses: 'Cursos e certificações',
@@ -56,7 +56,7 @@ const cv = {
     ],
     academic: [
       {
-        role: 'Diretor de TI → Gerente de Marketing',
+        role: 'Diretor de TI / Gerente de Marketing',
         org: 'Atlas Soluções em Tecnologia (Empresa Júnior · UNIFEI)',
         period: 'jan 2017 – jan 2019',
         text: 'Co-fundador e primeiro diretor de TI: criou o portfólio da diretoria, capacitou membros, geriu equipes e negociou com clientes; depois assumiu o marketing.',
@@ -77,23 +77,8 @@ const cv = {
     projects: [
       {
         name: 'Chatbot RAG para Saúde',
-        tags: 'Python · LLM · RAG',
-        text: 'TCC: responde dúvidas sobre COVID-19 e unidades de saúde de Itabira/MG com respostas fundamentadas em fontes oficiais.',
-      },
-      {
-        name: 'Blog com painel administrativo',
-        tags: 'Node.js · Express · MongoDB · Passport',
-        text: 'Área pública com busca e categorias; painel admin com CRUD e autenticação com hash bcrypt.',
-      },
-      {
-        name: 'Aplicação Go (em desenvolvimento)',
-        tags: 'Go · PostgreSQL · Docker',
-        text: 'Back-end com conteinerização e modelagem de dados.',
-      },
-      {
-        name: 'Site da Glas Agência',
-        tags: 'WordPress · Elementor',
-        text: 'Site one page como cartão de visita digital, com a identidade da marca de ponta a ponta.',
+        tags: 'Python · Google Gemini · LLM · RAG',
+        text: 'TCC em Engenharia de Computação: chatbot em Python que usa o modelo Gemini (LLM) com Retrieval-Augmented Generation (RAG) para responder dúvidas sobre COVID-19 e unidades de saúde de Itabira/MG, com respostas fundamentadas em fontes oficiais.',
       },
     ],
     skills: [
@@ -142,7 +127,7 @@ const cv = {
       summary: 'Summary',
       experience: 'Professional experience',
       academic: 'Experience during studies',
-      projects: 'Projects',
+      projects: 'Featured project',
       skills: 'Technical skills',
       education: 'Education',
       courses: 'Courses and certifications',
@@ -166,7 +151,7 @@ const cv = {
     ],
     academic: [
       {
-        role: 'IT Director → Marketing Manager',
+        role: 'IT Director / Marketing Manager',
         org: 'Atlas Soluções em Tecnologia (Junior Enterprise · UNIFEI)',
         period: 'Jan 2017 – Jan 2019',
         text: 'Co-founder and first IT director: built the IT service portfolio, trained members, managed teams and negotiated with clients; later led marketing.',
@@ -187,23 +172,8 @@ const cv = {
     projects: [
       {
         name: 'Health RAG Chatbot',
-        tags: 'Python · LLM · RAG',
-        text: 'Thesis: answers questions about COVID-19 and health units in Itabira, Brazil, grounded in official sources.',
-      },
-      {
-        name: 'Blog with admin panel',
-        tags: 'Node.js · Express · MongoDB · Passport',
-        text: 'Public area with search and categories; admin panel with CRUD and bcrypt-hashed authentication.',
-      },
-      {
-        name: 'Go application (in development)',
-        tags: 'Go · PostgreSQL · Docker',
-        text: 'Back-end with containerization and data modeling.',
-      },
-      {
-        name: 'Glas Agência website',
-        tags: 'WordPress · Elementor',
-        text: 'One-page site designed as a digital business card, with the brand identity applied end to end.',
+        tags: 'Python · Google Gemini · LLM · RAG',
+        text: 'Computer Engineering thesis: a Python chatbot that uses the Gemini model (LLM) with Retrieval-Augmented Generation (RAG) to answer questions about COVID-19 and health units in Itabira, Brazil, with answers grounded in official sources.',
       },
     ],
     skills: [
@@ -254,39 +224,35 @@ function html(d) {
   const section = (title, body) => `<section><h2>${esc(title)}</h2>${body}</section>`
   return `<!doctype html><html lang="${d.lang}"><head><meta charset="utf-8"><title>Lucas Pinto de Magalhães — CV</title><style>
   @font-face { font-family: Geist; src: url(${font('geist', 'geist-latin-wght-normal.woff2')}); font-weight: 100 900; }
-  @font-face { font-family: JBM; src: url(${font('jetbrains-mono', 'jetbrains-mono-latin-wght-normal.woff2')}); font-weight: 100 800; }
   @page { size: A4; margin: 0; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: Geist, sans-serif; color: #1f1f24; font-size: 8.7pt; line-height: 1.38; padding: 11mm 13mm 10mm; }
+  body { font-family: Geist, sans-serif; color: #1f2328; font-size: 8.8pt; line-height: 1.36; padding: 11mm 14mm 9mm; }
   a { color: inherit; text-decoration: none; }
-  header { padding-bottom: 3.2mm; border-bottom: 1.2pt solid; border-image: linear-gradient(90deg, #0891b2, #7c3aed) 1; }
-  h1 { font-size: 20pt; letter-spacing: -0.4pt; line-height: 1.1; font-weight: 700; }
-  .title { margin-top: 1mm; font-size: 10.5pt; font-weight: 600; color: #0e7490; }
-  .title span { color: #52525b; font-weight: 400; }
-  .meta { margin-top: 1.2mm; font-family: JBM, monospace; font-size: 7.6pt; color: #52525b; }
-  .meta { display: flex; flex-wrap: wrap; column-gap: 2.4mm; }
+  header { padding-bottom: 3.4mm; border-bottom: 1.4pt solid #0e7490; }
+  h1 { font-size: 21pt; letter-spacing: -0.3pt; line-height: 1.1; font-weight: 700; }
+  .title { margin-top: 1.2mm; font-size: 10.5pt; font-weight: 600; color: #0e7490; }
+  .title span { color: #4b5563; font-weight: 400; }
+  .meta { margin-top: 1.4mm; font-size: 8.4pt; color: #4b5563; display: flex; flex-wrap: wrap; column-gap: 2.4mm; }
   .meta span { white-space: nowrap; }
-  .meta span + span::before { content: '·'; margin-right: 2.4mm; color: #a1a1aa; }
-  .meta b { color: #7c3aed; font-weight: 500; }
-  section { margin-top: 3.2mm; }
-  h2 { font-family: JBM, monospace; font-size: 7.6pt; font-weight: 600; letter-spacing: 0.9pt; text-transform: uppercase; color: #0e7490; margin-bottom: 1.4mm; }
-  h2::before { content: '// '; color: #a1a1aa; }
+  .meta span + span::before { content: '|'; margin-right: 2.4mm; color: #9ca3af; }
+  .meta a { color: #0e7490; }
+  section { margin-top: 3.1mm; }
+  h2 { font-size: 9.6pt; font-weight: 700; letter-spacing: 1pt; text-transform: uppercase; color: #0e7490; padding-bottom: 0.8mm; border-bottom: 0.6pt solid #cfe7ee; margin-bottom: 1.6mm; }
   .row { display: flex; justify-content: space-between; gap: 4mm; align-items: baseline; }
-  .role { font-weight: 600; font-size: 9.2pt; }
-  .org { color: #3f3f46; }
-  .period { font-family: JBM, monospace; font-size: 7.4pt; color: #52525b; white-space: nowrap; }
-  ul { padding-left: 3.6mm; margin-top: 0.8mm; }
+  .role { font-weight: 600; font-size: 9.4pt; }
+  .org { color: #374151; }
+  .period { font-size: 8.2pt; color: #4b5563; font-style: italic; white-space: nowrap; }
+  ul { padding-left: 3.8mm; margin-top: 0.8mm; }
   li { margin-top: 0.4mm; }
-  li::marker { color: #0891b2; }
-  .item + .item { margin-top: 1.6mm; }
-  .small { color: #3f3f46; }
-  .tags { font-family: JBM, monospace; font-size: 7pt; color: #7c3aed; }
-  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6mm 6mm; }
-  .skills { display: grid; grid-template-columns: 17mm 1fr; gap: 0.6mm 2mm; }
+  li::marker { color: #0e7490; }
+  .item + .item { margin-top: 1.5mm; }
+  .small { color: #374151; }
+  .tags { font-size: 8.2pt; font-weight: 600; color: #0e7490; margin-top: 0.3mm; }
+  .grid2 { display: grid; grid-template-columns: 1fr; gap: 1.6mm; }
+  .skills { display: grid; grid-template-columns: 19mm 1fr; gap: 0.7mm 2mm; }
   .skills dt { font-weight: 600; }
   .cols { display: grid; grid-template-columns: 1.15fr 1fr; gap: 6mm; }
-  .plain { list-style: none; padding: 0; }
-  .plain li::before { content: '▸ '; color: #0891b2; }
+  .plain { padding-left: 3.8mm; }
 </style></head><body>
 <header>
   <h1>Lucas Pinto de Magalhães</h1>
