@@ -10,4 +10,5 @@
   ```
 
 - Pushes e pull requests usam a conta GitHub `lukinhapdm`.
+- Não adicione a linha `Co-Authored-By` nas mensagens de commit.
 - Teste as mudanças no navegador (desktop e mobile) antes de enviar para o git.
