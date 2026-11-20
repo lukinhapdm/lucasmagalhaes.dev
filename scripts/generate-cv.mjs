@@ -89,7 +89,7 @@ const cv = {
       ['Back-end', 'Go, Node.js, Python, C++, REST APIs'],
       ['Dados', 'PostgreSQL, MongoDB, SQL, Power BI'],
       ['IA', 'LLM, RAG, fine-tuning, prompt engineering, chatbots'],
-      ['DevOps', 'Docker, Git, GitHub, Vercel, servidores, e-mail corporativo, Google Tag Manager'],
+      ['DevOps', 'Docker, Git, GitHub, Vercel, Google Tag Manager'],
       ['Outros', 'Domain-Driven Design, Photoshop, Pacote Office'],
     ],
     education: [
@@ -184,7 +184,7 @@ const cv = {
       ['Back-end', 'Go, Node.js, Python, C++, REST APIs'],
       ['Data', 'PostgreSQL, MongoDB, SQL, Power BI'],
       ['AI', 'LLM, RAG, fine-tuning, prompt engineering, chatbots'],
-      ['DevOps', 'Docker, Git, GitHub, Vercel, servers, corporate email, Google Tag Manager'],
+      ['DevOps', 'Docker, Git, GitHub, Vercel, Google Tag Manager'],
       ['Other', 'Domain-Driven Design, Photoshop, Microsoft Office'],
     ],
     education: [
