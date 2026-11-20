@@ -34,7 +34,7 @@ export const selfStudies: SelfStudy[] = [
   {
     id: 'ddd',
     area: 'engineering',
-    topics: ['ubiquitousLanguage', 'boundedContexts', 'aggregates', 'domainEvents'],
+    topics: ['ubiquitousLanguage', 'domainEvents'],
   },
   { id: 'llm', area: 'data', topics: ['rag', 'fineTuning'] },
 ]

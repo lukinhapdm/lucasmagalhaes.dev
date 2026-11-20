@@ -233,14 +233,12 @@
         "summary": "Por conta própria: modelar o software a partir do domínio do negócio, com linguagem compartilhada e fronteiras claras.",
         "topics": {
           "ubiquitousLanguage": "Linguagem ubíqua",
-          "boundedContexts": "Bounded contexts",
-          "aggregates": "Agregados",
           "domainEvents": "Eventos de domínio"
         }
       },
       "llm": {
         "title": "RAG e fine-tuning de LLMs",
-        "summary": "Por conta própria: como adaptar modelos de linguagem — buscar contexto em fontes externas (RAG) ou especializar o próprio modelo (fine-tuning).",
+        "summary": "Por conta própria: adaptar LLMs com contexto de fontes externas (RAG) ou especializando o modelo (fine-tuning).",
         "topics": {
           "rag": "RAG",
           "fineTuning": "Fine-tuning"

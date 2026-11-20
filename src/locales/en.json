@@ -233,14 +233,12 @@
         "summary": "On my own: modeling software around the business domain, with a shared language and clear boundaries.",
         "topics": {
           "ubiquitousLanguage": "Ubiquitous language",
-          "boundedContexts": "Bounded contexts",
-          "aggregates": "Aggregates",
           "domainEvents": "Domain events"
         }
       },
       "llm": {
         "title": "RAG and LLM fine-tuning",
-        "summary": "On my own: how to adapt language models — retrieving context from external sources (RAG) or specializing the model itself (fine-tuning).",
+        "summary": "On my own: adapting LLMs with context from external sources (RAG) or by specializing the model (fine-tuning).",
         "topics": {
           "rag": "RAG",
           "fineTuning": "Fine-tuning"
