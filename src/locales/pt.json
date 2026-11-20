@@ -229,7 +229,7 @@
     "selfStudy": {
       "badge": "Estudo independente",
       "items": {
-        "frontendImmersion": "Imersão Front-End — Alura",
+        "webDevelopment": "Desenvolvimento Web",
         "ddd": "Domain-Driven Design (DDD)",
         "ragFineTuning": "RAG e fine-tuning de LLMs",
         "promptEngineering": "Prompt engineering"
