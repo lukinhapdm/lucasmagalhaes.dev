@@ -42,7 +42,7 @@
     ],
     "stats": {
       "years": "anos como dev full stack profissional",
-      "experiences": "experiências profissionais",
+      "projects": "projetos desenvolvidos",
       "technologies": "tecnologias no dia a dia",
       "ai": "projeto de IA aplicado à saúde"
     }
@@ -66,31 +66,22 @@
       "atlas": {
         "role": "Diretor de TI → Gerente de Marketing",
         "kind": "Empresa Júnior",
-        "summary": "Co-fundador e primeiro diretor de TI da empresa júnior.",
-        "highlights": [
-          "Criou o portfólio de serviços da diretoria de TI",
-          "Capacitou membros, geriu equipes e negociou com clientes",
-          "Assumiu depois a gerência de marketing"
-        ]
+        "summary": "Co-fundou a empresa júnior, estruturou e dirigiu a área de TI e depois assumiu o marketing."
       },
       "up": {
         "role": "Associado de TI",
         "kind": "Empresa Júnior",
-        "summary": "Desenvolvimento de soluções web e desktop para clientes.",
-        "highlights": [
-          "Desenvolveu o site do evento ExpoJob",
-          "Criou a interface gráfica (Python) do software de vendas do Buffet Gut's"
-        ]
+        "summary": "Desenvolveu o site do evento ExpoJob e a interface em Python do software de vendas do Buffet Gut's."
       },
       "powerblade": {
         "role": "Técnico de Laboratório",
         "kind": "Estágio",
-        "summary": "Suporte técnico em laboratório de eletrônica.",
-        "highlights": [
-          "Análises técnicas e manutenção de no-breaks",
-          "Organização do laboratório e atendimento ao cliente"
-        ]
+        "summary": "Manutenção e análise técnica de no-breaks, organização do laboratório e atendimento."
       }
+    },
+    "academic": {
+      "title": "Durante a formação acadêmica",
+      "description": "Experiências profissionais em empresas juniores e estágio, realizadas durante a graduação em Engenharia de Computação (UNIFEI) e o curso técnico em Mecatrônica (ETEP)."
     }
   },
   "projects": {
@@ -136,6 +127,18 @@
         "rest-api-learning": "Consumo de REST API usando JSONPlaceholder, com exemplos de código.",
         "curso-nodejs": "Curso de Node.js com o professor Victor Lima (16h) — EAD Education."
       }
+    },
+    "teaser": {
+      "text": "Do chatbot de saúde com IA a aplicações em Go: veja os projetos em destaque, trabalhos profissionais e estudos.",
+      "cta": "Ver todos os projetos",
+      "count": "{{count}} projetos e estudos na página"
+    },
+    "page": {
+      "title": "Projetos",
+      "subtitle": "Projetos em destaque, trabalhos profissionais e estudos — do back-end em Go à IA aplicada.",
+      "back": "Voltar ao início",
+      "metaTitle": "Projetos — Lucas Magalhães",
+      "featured": "Em destaque"
     }
   },
   "skills": {
@@ -159,11 +162,7 @@
     "leadership": "Liderança",
     "communication": "Comunicação assertiva",
     "projectManagement": "Gestão de projetos",
-    "teamwork": "Trabalho em equipe",
-    "itManagement": "Gestão de TI",
-    "negotiation": "Negociação",
-    "ups": "No-breaks",
-    "support": "Suporte técnico"
+    "teamwork": "Trabalho em equipe"
   },
   "education": {
     "eyebrow": "formação",

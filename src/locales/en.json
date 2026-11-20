@@ -42,7 +42,7 @@
     ],
     "stats": {
       "years": "years as a professional full stack dev",
-      "experiences": "professional experiences",
+      "projects": "projects built",
       "technologies": "technologies in daily use",
       "ai": "AI project applied to healthcare"
     }
@@ -66,31 +66,22 @@
       "atlas": {
         "role": "IT Director → Marketing Manager",
         "kind": "Junior Enterprise",
-        "summary": "Co-founder and first IT director of the junior enterprise.",
-        "highlights": [
-          "Created the IT board's service portfolio",
-          "Trained members, managed teams and negotiated with clients",
-          "Later took over as marketing manager"
-        ]
+        "summary": "Co-founded the junior enterprise, built and led the IT area, then took over marketing."
       },
       "up": {
         "role": "IT Associate",
         "kind": "Junior Enterprise",
-        "summary": "Web and desktop solutions for clients.",
-        "highlights": [
-          "Built the website for the ExpoJob event",
-          "Created the graphical interface (Python) for Buffet Gut's sales software"
-        ]
+        "summary": "Built the ExpoJob event website and the Python interface for Buffet Gut's sales software."
       },
       "powerblade": {
         "role": "Laboratory Technician",
         "kind": "Internship",
-        "summary": "Technical support in an electronics laboratory.",
-        "highlights": [
-          "Technical analysis and maintenance of UPS units",
-          "Laboratory organization and customer service"
-        ]
+        "summary": "Maintenance and technical analysis of UPS units, lab organization and customer service."
       }
+    },
+    "academic": {
+      "title": "During my studies",
+      "description": "Professional experience at junior enterprises and an internship, gained while studying Computer Engineering (UNIFEI) and Mechatronics as a technician (ETEP)."
     }
   },
   "projects": {
@@ -136,6 +127,18 @@
         "rest-api-learning": "Going through REST API consumption using JSONPlaceholder. Code examples.",
         "curso-nodejs": "Node.js course with professor Victor Lima (16h) — EAD Education."
       }
+    },
+    "teaser": {
+      "text": "From an AI health chatbot to Go applications: browse featured projects, professional work and studies.",
+      "cta": "View all projects",
+      "count": "{{count}} projects and studies on the page"
+    },
+    "page": {
+      "title": "Projects",
+      "subtitle": "Featured projects, professional work and studies — from Go back-ends to applied AI.",
+      "back": "Back to home",
+      "metaTitle": "Projects — Lucas Magalhães",
+      "featured": "Featured"
     }
   },
   "skills": {
@@ -159,11 +162,7 @@
     "leadership": "Leadership",
     "communication": "Assertive communication",
     "projectManagement": "Project management",
-    "teamwork": "Teamwork",
-    "itManagement": "IT management",
-    "negotiation": "Negotiation",
-    "ups": "UPS units",
-    "support": "Technical support"
+    "teamwork": "Teamwork"
   },
   "education": {
     "eyebrow": "education",

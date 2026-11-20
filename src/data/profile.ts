@@ -24,7 +24,7 @@ export const profile: Profile = {
   ],
   stats: [
     { id: 'years', value: 2, suffix: '+' },
-    { id: 'experiences', value: 4 },
+    { id: 'projects', value: 20, suffix: '+' },
     { id: 'technologies', value: 10, suffix: '+' },
     { id: 'ai', value: 1 },
   ],
