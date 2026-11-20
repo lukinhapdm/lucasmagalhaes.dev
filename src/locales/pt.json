@@ -228,21 +228,10 @@
     },
     "selfStudy": {
       "badge": "Estudo independente",
-      "ddd": {
-        "title": "Domain-Driven Design (DDD)",
-        "summary": "Por conta própria: modelar o software a partir do domínio do negócio, com linguagem compartilhada e fronteiras claras.",
-        "topics": {
-          "ubiquitousLanguage": "Linguagem ubíqua",
-          "domainEvents": "Eventos de domínio"
-        }
-      },
-      "llm": {
-        "title": "RAG e fine-tuning de LLMs",
-        "summary": "Por conta própria: adaptar LLMs com contexto de fontes externas (RAG) ou especializando o modelo (fine-tuning).",
-        "topics": {
-          "rag": "RAG",
-          "fineTuning": "Fine-tuning"
-        }
+      "items": {
+        "ddd": "Domain-Driven Design (DDD)",
+        "ragFineTuning": "RAG e fine-tuning de LLMs",
+        "promptEngineering": "Prompt engineering"
       }
     },
     "carousel": {

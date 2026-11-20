@@ -145,10 +145,8 @@ export interface KnowledgeArea {
 }
 
 export interface SelfStudy {
-  /** Textos em `knowledge.selfStudy.<id>` (título e resumo). */
+  /** Nome em `knowledge.selfStudy.items.<id>`. */
   id: string
-  /** Card de área onde o estudo aparece, em destaque. */
+  /** Card de área em cuja lista o estudo aparece (com o selo "Estudo independente"). */
   area: KnowledgeAreaId
-  /** Conceitos estudados: chaves de `knowledge.selfStudy.<id>.topics.<key>`. */
-  topics: string[]
 }

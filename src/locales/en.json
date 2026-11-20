@@ -228,21 +228,10 @@
     },
     "selfStudy": {
       "badge": "Self-study",
-      "ddd": {
-        "title": "Domain-Driven Design (DDD)",
-        "summary": "On my own: modeling software around the business domain, with a shared language and clear boundaries.",
-        "topics": {
-          "ubiquitousLanguage": "Ubiquitous language",
-          "domainEvents": "Domain events"
-        }
-      },
-      "llm": {
-        "title": "RAG and LLM fine-tuning",
-        "summary": "On my own: adapting LLMs with context from external sources (RAG) or by specializing the model (fine-tuning).",
-        "topics": {
-          "rag": "RAG",
-          "fineTuning": "Fine-tuning"
-        }
+      "items": {
+        "ddd": "Domain-Driven Design (DDD)",
+        "ragFineTuning": "RAG and LLM fine-tuning",
+        "promptEngineering": "Prompt engineering"
       }
     },
     "carousel": {

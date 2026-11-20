@@ -14,7 +14,7 @@ import { Carousel } from '@/components/ui/Carousel'
 import { Reveal } from '@/components/ui/Reveal'
 import { Section } from '@/components/ui/Section'
 import { knowledgeAreas, selfStudies } from '@/data/knowledge'
-import type { KnowledgeAreaId, SelfStudy } from '@/types/content'
+import type { KnowledgeAreaId } from '@/types/content'
 
 const areaIcons: Record<KnowledgeAreaId, LucideIcon> = {
   fundamentals: Code2,
@@ -22,36 +22,6 @@ const areaIcons: Record<KnowledgeAreaId, LucideIcon> = {
   interfaces: MonitorSmartphone,
   engineering: Workflow,
   data: BrainCircuit,
-}
-
-/** Bloco compacto, em destaque, para um estudo feito por conta própria. */
-function SelfStudyNote({ study }: { study: SelfStudy }) {
-  const { t } = useTranslation()
-  const key = `knowledge.selfStudy.${study.id}`
-  return (
-    <div className="relative mt-5 overflow-hidden rounded-xl border border-accent/40 bg-surface-2/50 p-4">
-      <div
-        aria-hidden
-        className="absolute -top-10 -right-10 size-28 rounded-full bg-gradient-accent opacity-15 blur-2xl"
-      />
-      <p className="inline-flex items-center gap-1.5 font-mono text-[11px] text-accent">
-        <Sparkles aria-hidden className="size-3.5" />
-        {t('knowledge.selfStudy.badge')}
-      </p>
-      <h4 className="mt-1.5 text-sm font-semibold tracking-tight">{t(`${key}.title`)}</h4>
-      <p className="mt-1 text-xs leading-relaxed text-muted">{t(`${key}.summary`)}</p>
-      <ul className="mt-3 flex flex-wrap gap-1.5">
-        {study.topics.map((topic) => (
-          <li
-            key={topic}
-            className="rounded-md border border-border bg-surface/80 px-2 py-0.5 font-mono text-[10.5px] text-fg/90"
-          >
-            {t(`${key}.topics.${topic}`)}
-          </li>
-        ))}
-      </ul>
-    </div>
-  )
 }
 
 /** Conhecimentos da graduação (por área), com estudos independentes em destaque. */
@@ -98,10 +68,19 @@ export function Knowledge() {
                         {t(`knowledge.courses.${course}`)}
                       </li>
                     ))}
+                    {studies.map((study) => (
+                      <li key={study.id} className="flex items-start gap-2.5 text-fg/90">
+                        <span aria-hidden className="mt-2 size-1 shrink-0 rounded-full bg-accent" />
+                        <span className="grid flex-1 grid-cols-[1fr_auto] items-start gap-x-2">
+                          {t(`knowledge.selfStudy.items.${study.id}`)}
+                          <span className="mt-0.5 inline-flex items-center gap-1 rounded-full border border-accent/40 bg-surface-2/60 px-2 py-px font-mono text-[10px] whitespace-nowrap text-accent">
+                            <Sparkles aria-hidden className="size-3" />
+                            {t('knowledge.selfStudy.badge')}
+                          </span>
+                        </span>
+                      </li>
+                    ))}
                   </ul>
-                  {studies.map((study) => (
-                    <SelfStudyNote key={study.id} study={study} />
-                  ))}
                 </Card>
               </div>
             )
