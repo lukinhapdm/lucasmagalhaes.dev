@@ -51,7 +51,7 @@ export const projects: Project[] = [
   {
     id: 'gecko',
     icon: 'briefcase',
-    tags: ['WordPress', 'Google Tag Manager'],
+    tags: ['WordPress', 'Elementor', 'Google Tag Manager'],
     status: 'ongoing',
     showcase: [
       { id: 'glas', url: 'https://glasagencia.com.br/', image: '/projects/glas/home.webp' },

@@ -134,16 +134,19 @@ export function ProjectCard({ project, className }: { project: Project; classNam
               >
                 <Screenshot
                   src={site.image}
-                  alt={t(`${key}.showcase.${site.id}`)}
+                  alt={t(`${key}.showcase.${site.id}.title`)}
                   className="transition-transform duration-500 ease-out-expo group-hover/site:scale-[1.03]"
                 />
               </BrowserFrame>
               <span className="mt-3 flex items-center justify-between gap-3 text-sm">
-                <span className="text-fg">{t(`${key}.showcase.${site.id}`)}</span>
+                <span className="font-medium text-fg">{t(`${key}.showcase.${site.id}.title`)}</span>
                 <span className="inline-flex shrink-0 items-center gap-1 font-medium text-muted transition-colors group-hover/site:text-accent">
                   {t('projects.visit')}
                   <ArrowUpRight aria-hidden className="size-4" />
                 </span>
+              </span>
+              <span className="mt-1.5 block text-sm leading-relaxed text-muted">
+                {t(`${key}.showcase.${site.id}.description`)}
               </span>
             </ExternalLink>
           </div>

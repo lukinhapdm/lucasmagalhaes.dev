@@ -124,7 +124,10 @@
         "title": "Professional work — Gecko",
         "description": "Client websites and digital ecosystems with WordPress, infrastructure and GTM tracking.",
         "showcase": {
-          "glas": "Glas Agência corporate website"
+          "glas": {
+            "title": "Glas Agência — one-page website",
+            "description": "Designed as a digital business card: a single page with Glas's visual identity applied end to end, presenting the agency's purpose, services and clients in a straightforward way, with anchor navigation."
+          }
         }
       }
     },

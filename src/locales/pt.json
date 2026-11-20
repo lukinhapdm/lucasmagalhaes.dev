@@ -124,7 +124,10 @@
         "title": "Trabalhos profissionais — Gecko",
         "description": "Sites e ecossistemas digitais de clientes, com WordPress, infraestrutura e rastreamento via GTM.",
         "showcase": {
-          "glas": "Site institucional da Glas Agência"
+          "glas": {
+            "title": "Glas Agência — site one page",
+            "description": "Pensado como um cartão de visita digital: uma única página com a identidade visual da Glas aplicada de ponta a ponta, apresentando de forma direta o propósito, os serviços e os clientes da agência, com navegação por âncoras."
+          }
         }
       }
     },
