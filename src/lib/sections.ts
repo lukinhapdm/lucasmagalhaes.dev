@@ -1,3 +1,5 @@
+import { navigate } from '@/lib/router'
+
 export const SECTIONS = [
   'hero',
   'about',
@@ -9,6 +11,17 @@ export const SECTIONS = [
 ] as const
 
 export type SectionId = (typeof SECTIONS)[number]
+
+/** Itens do menu: seções da home + a página de projetos. */
+export const NAV_ITEMS = [
+  'about',
+  'experience',
+  'projects',
+  'skills',
+  'education',
+  'contact',
+] as const
+export type NavItem = (typeof NAV_ITEMS)[number]
 
 /** Distância entre o topo da tela e o título da seção ao final da rolagem (header + respiro). */
 const TITLE_OFFSET = 96
@@ -82,4 +95,19 @@ export function scrollToSection(id: SectionId) {
   window.addEventListener('touchstart', stop, { passive: true })
   cancelCurrent = stop
   raf = requestAnimationFrame(step)
+}
+
+/** Vai para uma seção da home; se estiver em outra página, navega antes. */
+export function goToSection(id: SectionId) {
+  if (location.pathname !== '/') {
+    navigate(id === 'hero' ? '/' : `/#${id}`)
+    return
+  }
+  scrollToSection(id)
+}
+
+/** Rolagem suave até o topo da página atual. */
+export function scrollToTop() {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' })
 }

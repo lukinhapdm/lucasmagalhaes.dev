@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 
 /** Retorna o id da seção visível no centro da viewport. */
-export function useActiveSection(ids: readonly string[]): string {
+/** `resetKey` (ex.: rota atual) refaz a observação quando a página muda. */
+export function useActiveSection(ids: readonly string[], resetKey?: string): string {
   const [active, setActive] = useState(ids[0] ?? '')
 
   useEffect(() => {
@@ -18,7 +19,7 @@ export function useActiveSection(ids: readonly string[]): string {
       if (el) observer.observe(el)
     })
     return () => observer.disconnect()
-  }, [ids])
+  }, [ids, resetKey])
 
   return active
 }
