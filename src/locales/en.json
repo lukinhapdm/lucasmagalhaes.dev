@@ -141,6 +141,7 @@
       "title": "Lab",
       "subtitle": "Studies, courses and experiments.",
       "items": {
+        "cplusplus-learning": "C++ code, examples and solved exercises from my degree: fundamentals, data structures (stacks, queues, lists, trees and hashing), sorting and object-oriented programming.",
         "go-learning": "Going through the official Go language tour. Code examples and exercises.",
         "rest-api-learning": "Going through REST API consumption using JSONPlaceholder. Code examples.",
         "nodejs-learning": "Exercises and projects from Victor Lima's Node.js course: Express, Handlebars, MySQL with Sequelize and MongoDB with Mongoose."

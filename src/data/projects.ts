@@ -62,6 +62,12 @@ export const projects: Project[] = [
 /** Cards menores da seção "Laboratório / Estudos". Descrições em `projects.lab.items.<id>`. */
 export const labProjects: LabProject[] = [
   {
+    id: 'cplusplus-learning',
+    name: 'cplusplus-learning',
+    language: 'C++',
+    repo: 'https://github.com/lukinhapdm/cplusplus-learning',
+  },
+  {
     id: 'go-learning',
     name: 'go-learning',
     language: 'Go',

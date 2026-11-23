@@ -141,6 +141,7 @@
       "title": "Laboratório",
       "subtitle": "Estudos, cursos e experimentos.",
       "items": {
+        "cplusplus-learning": "Códigos, exemplos e exercícios resolvidos em C++ da graduação: fundamentos, estruturas de dados (pilha, fila, listas, árvores e hash), ordenação e orientação a objetos.",
         "go-learning": "Percorrendo o tour oficial da linguagem Go, com exemplos e exercícios.",
         "rest-api-learning": "Consumo de REST API usando JSONPlaceholder, com exemplos de código.",
         "nodejs-learning": "Exercícios e projetos do curso de Node.js do professor Victor Lima: Express, Handlebars, MySQL com Sequelize e MongoDB com Mongoose."

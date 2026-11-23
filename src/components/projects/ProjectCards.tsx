@@ -37,6 +37,7 @@ const langColors: Record<string, string> = {
   JavaScript: '#F1E05A',
   CSS: '#8B5CF6',
   Python: '#3572A5',
+  'C++': '#F34B7D',
 }
 
 /** Layout do bento: índice → classes de grid. */
