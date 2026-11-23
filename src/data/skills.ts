@@ -20,7 +20,7 @@ export const skills: SkillGroup[] = [
   },
   { id: 'backend', items: ['Go', 'Node.js', 'Python', 'C++', 'REST APIs'] },
   { id: 'database', items: ['PostgreSQL', 'MongoDB', 'SQL'] },
-  { id: 'ai', items: ['LLM', 'RAG', 'chatbots'] },
+  { id: 'ai', items: ['LLM', 'RAG', 'Fine-tuning', 'Prompt engineering', 'chatbots'] },
   { id: 'devops', items: ['Docker', 'Git', 'GitHub', 'Vercel', 'servers', 'corporateEmail'] },
   { id: 'analytics', items: ['Google Tag Manager', 'Power BI', 'dataAnalysis'] },
   { id: 'soft', items: ['leadership', 'communication', 'projectManagement', 'teamwork'] },
