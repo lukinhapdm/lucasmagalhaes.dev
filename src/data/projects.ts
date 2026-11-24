@@ -59,7 +59,7 @@ export const projects: Project[] = [
   },
 ]
 
-/** Cards menores da seção "Laboratório / Estudos". Descrições em `projects.lab.items.<id>`. */
+/** Cards do Laboratório, na ordem de exibição. Descrições em `projects.lab.items.<id>`. */
 export const labProjects: LabProject[] = [
   {
     id: 'cplusplus-learning',
@@ -68,10 +68,16 @@ export const labProjects: LabProject[] = [
     repo: 'https://github.com/lukinhapdm/cplusplus-learning',
   },
   {
-    id: 'go-learning',
-    name: 'go-learning',
-    language: 'Go',
-    repo: 'https://github.com/lukinhapdm/go-learning',
+    id: 'nodejs-learning',
+    name: 'nodejs-learning',
+    language: 'JavaScript',
+    repo: 'https://github.com/lukinhapdm/nodejs-learning',
+  },
+  {
+    id: 'python-learning',
+    name: 'python-learning',
+    language: 'Python',
+    repo: 'https://github.com/lukinhapdm/python-learning',
   },
   {
     id: 'rest-api-learning',
@@ -80,9 +86,9 @@ export const labProjects: LabProject[] = [
     repo: 'https://github.com/lukinhapdm/rest-api-learning',
   },
   {
-    id: 'nodejs-learning',
-    name: 'nodejs-learning',
-    language: 'JavaScript',
-    repo: 'https://github.com/lukinhapdm/nodejs-learning',
+    id: 'go-learning',
+    name: 'go-learning',
+    language: 'Go',
+    repo: 'https://github.com/lukinhapdm/go-learning',
   },
 ]

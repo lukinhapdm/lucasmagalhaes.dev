@@ -142,9 +142,10 @@
       "subtitle": "Studies, courses and experiments.",
       "items": {
         "cplusplus-learning": "C++ code, examples and solved exercises from my degree: fundamentals, data structures (stacks, queues, lists, trees and hashing), sorting and object-oriented programming.",
-        "go-learning": "Going through the official Go language tour. Code examples and exercises.",
+        "nodejs-learning": "Exercises and projects from Victor Lima's Node.js course: Express, Handlebars, MySQL with Sequelize and MongoDB with Mongoose.",
+        "python-learning": "Examples and solved exercises from IFSC's Python Fundamentals 1 & 2 courses: data types and operators, conditionals, bitwise operations, lists, loops and matrices.",
         "rest-api-learning": "Going through REST API consumption using JSONPlaceholder. Code examples.",
-        "nodejs-learning": "Exercises and projects from Victor Lima's Node.js course: Express, Handlebars, MySQL with Sequelize and MongoDB with Mongoose."
+        "go-learning": "Going through the official Go language tour. Code examples and exercises."
       }
     },
     "teaser": {
