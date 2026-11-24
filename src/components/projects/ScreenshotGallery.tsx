@@ -34,23 +34,49 @@ export function ScreenshotGallery({
           />
         ))}
       </BrowserFrame>
-      <div role="group" aria-label={t('projects.screens')} className="mt-3 flex flex-wrap gap-1.5">
-        {images.map((img, i) => (
-          <button
-            key={img.src}
-            type="button"
-            aria-pressed={i === active}
-            onClick={() => setActive(i)}
-            className={cn(
-              'relative z-[2] rounded-md border px-2.5 py-1 font-mono text-[11px] transition-colors duration-200',
-              i === active
-                ? 'border-accent/60 bg-surface-2 text-fg'
-                : 'border-border text-muted hover:border-border-strong hover:text-fg',
-            )}
-          >
-            {label(img)}
-          </button>
-        ))}
+      {/* Miniaturas: reaproveitam as mesmas imagens da galeria (sem download extra). */}
+      <div role="group" aria-label={t('projects.screens')} className="mt-3 grid grid-cols-4 gap-2">
+        {images.map((img, i) => {
+          const selected = i === active
+          return (
+            <button
+              key={img.src}
+              type="button"
+              aria-pressed={selected}
+              onClick={() => setActive(i)}
+              className={cn(
+                'group/thumb relative z-[2] flex flex-col items-center gap-1.5 text-center transition-opacity duration-200',
+                selected ? 'opacity-100' : 'opacity-55 hover:opacity-100',
+              )}
+            >
+              {/* Borda em degradê na miniatura ativa (padding de 1.5px sobre fundo em degradê). */}
+              <span
+                className={cn(
+                  'block w-full rounded-lg p-[1.5px]',
+                  selected ? 'bg-gradient-accent' : 'bg-border-strong',
+                )}
+              >
+                <img
+                  src={img.src}
+                  alt=""
+                  width={1280}
+                  height={800}
+                  loading="lazy"
+                  decoding="async"
+                  className="block aspect-[16/10] w-full rounded-[7px] object-cover object-top"
+                />
+              </span>
+              <span
+                className={cn(
+                  'text-[10.5px] leading-tight',
+                  selected ? 'font-medium text-fg' : 'text-muted',
+                )}
+              >
+                {label(img)}
+              </span>
+            </button>
+          )
+        })}
       </div>
     </div>
   )
